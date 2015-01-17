@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+    <TITLE><H2>Package description: <code>Libor</code></H2></TITLE>
+</HEAD>
+<BODY>
+
+<H2>Package description: <code>Libor</code></H2>
+
+<!-- Greek characters mu="&#03BC", nu="&#03BD" -->
+
+<p>Implementation of the Libor Market Model (LMM) with deterministic forward
+    Libor volatilities and constant correlations and some basic Libor derivatives.
+    The theory behind the LMM cannot be adequately represented in the javadoc
+    format. The document <i>LiborProcess.ps</i> contains all the details.
+</p>
+
+<p>This implementation is intended to be used for theoretical investigations
+    and cannot in its present form be used for the actual pricing
+    of Libor derivatives. There is no routine which builds an initial term structure
+    of forward Libors or which extracts a tenor structure from actual dates and
+    market conventions. You will have to supply these if you want to use the model
+    in this way:</p>
+
+<p><b>Warning:</b> This code is fragile and has not nearly been tested enough.
+    It is intended to provide an infrastructure for users to run their own
+    experiments and supply them with ideas and examples. The target audience are
+    programmers interested enough to read the source code and run
+    tests. One hopes that a bug manifests itself by a simple crash. But what if
+    it is more subtle resulting in a pricing error?
+    Note the complete lack of warranty governing this package.
+</p>
+
+</BODY>
+</HTML>

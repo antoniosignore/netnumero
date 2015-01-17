@@ -1,0 +1,202 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:gwtdate="com.google.gwt.user.datepicker.client"
+             xmlns:nhw="urn:import:com.numhero.client.widget" xmlns:nhtb="urn:import:com.numhero.client.widget.textbox"
+             xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+             xmlns:nhimg="urn:import:com.numhero.client.widget.image"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             ui:defaultLocale="en"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="MyApp"
+             ui:generateLocales="default">
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:DisclosurePanel ui:field="errorsPanel" styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <ui:msg key="myapp.myapp.details">MyApp Details</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="myapp.id">MyApp ID</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:Label ui:field="tbID" width="100%"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="myapp.name">MyApp name</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbName" width="100%"/>
+                        </td>
+
+
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="myapp.invoiceColorScheme">MyApp color scheme
+                                </ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:ColorComboBox ui:field="cbColorScheme" width="100%"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="icon">Icon URL</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="fIconURL" width="100%"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="background">Background URL</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="fBackgroundURL" width="100%"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="splash">SplashImage URL</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="fSplashImageURL" width="100%"/>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbNewsTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbNewsTab"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbAudiosTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbAudiosTab"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbVideosTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbVideosTab"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbImagesTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbImagesTab"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbEventsTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbEventsTab"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbFeedsTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbFeedsTab"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbLinksTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbLinksTab"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbFacebookTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbFacebookTab"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbTwitterTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbTwitterTab"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbYouTubeTab"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbYouTubeTab"/>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HorizontalPanel horizontalAlignment="ALIGN_RIGHT">
+            <nhw:NetNumeroButton href="javascript:;" ui:field="btSave">
+                <ui:msg key="save">Save</ui:msg>
+            </nhw:NetNumeroButton>
+            <nhw:NetNumeroButton href="javascript:;" ui:field="btCancel">
+                <ui:msg key="cancel">Cancel</ui:msg>
+            </nhw:NetNumeroButton>
+        </gwt:HorizontalPanel>
+
+    </gwt:HTMLPanel>
+</ui:UiBinder>

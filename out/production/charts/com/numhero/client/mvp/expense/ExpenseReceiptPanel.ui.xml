@@ -1,0 +1,129 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwtdate="com.google.gwt.user.datepicker.client"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:nhiw="urn:import:com.numhero.client.mvp.task"
+             xmlns:nhpw="urn:import:com.numhero.client.mvp.project"
+             xmlns:nhss="urn:import:com.numhero.client.mvp.staff"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             xmlns:nhex="urn:import:com.numhero.client.mvp.expense"
+             xmlns:nhtb="urn:import:com.numhero.client.widget.textbox"
+             xmlns:nhwcb="urn:import:com.numhero.client.widget.combobox"
+             xmlns:nhcsw="urn:import:com.numhero.client.mvp.clientsupplier"
+             xmlns:nhew="urn:import:com.numhero.client.mvp.category"
+             xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+             ui:defaultLocale="en"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="ExpensePanel" ui:generateLocales="default">
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:DisclosurePanel ui:field="errorsPanel"
+                             styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="6">
+                            <ui:msg key="expenses">Expenses</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="staff.contractor">Staff/Contractor</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhss:StaffSelect ui:field="sbStaff"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="client">Client</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcsw:ClientSelect ui:field="sbClient"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="category">Category</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhew:CategorySelect ui:field="sbCategory"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="selected.date">Date</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox ui:field="selectedDate"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="currency">Currency</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:CurrencySelect ui:field="cbCurrency"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="amount">Amount</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhtb:NumberTextBox readOnly="false" ui:field="amount"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="notes">Notes</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:TextArea ui:field="notes" width="100%"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="6">
+                            <gwt:HorizontalPanel styleName="buttonsPanel">
+                                <!-- <nhw:NetNumeroButton ui:field='btNew'> <ui:msg key="new">New</ui:msg>
+                                            </nhw:NetNumeroButton> -->
+                                <nhw:NetNumeroButton ui:field='btNew'>
+                                    <ui:msg key="new.receipt">New Receipt</ui:msg>
+                                </nhw:NetNumeroButton>
+                                <nhw:NetNumeroButton ui:field='btSave'>
+                                    <ui:msg key="save">Save</ui:msg>
+                                </nhw:NetNumeroButton>
+                                <nhw:NetNumeroButton ui:field="btCancel"
+                                                     href="#time">
+                                    <ui:msg key="cancel">Cancel</ui:msg>
+                                </nhw:NetNumeroButton>
+                            </gwt:HorizontalPanel>
+                        </td>
+                    </tr>
+
+                    <tr class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <td colspan="14">
+                            <nhex:ExpensesTable ui:field="expensesTable"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

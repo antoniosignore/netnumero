@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <dl class="inh-menu">
+            <dt class="inh-menu">
+                <a href="#image" class="inh-menu">
+                    <ui:msg key="submenu.staticContent.create.v">Create Image</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu">
+                <a href="#images" class="inh-menu">
+                    <ui:msg key="submenu.staticContent.view.image">View Image</ui:msg>
+                </a>
+            </dt>
+        </dl>
+    </g:HTMLPanel>
+</ui:UiBinder> 

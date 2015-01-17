@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <dl class="inh-menu">
+            <dt class="inh-menu">
+                <a href="#invoice" class="inh-menu">
+                    <ui:msg key="submenu.moneyin.create.invoice">Create An Invoice</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu">
+                <a href="#invoices" class="inh-menu">
+                    <ui:msg key="submenu.moneyin.view.recent.invoices">View Most Recent Invoices
+                    </ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu-end">
+                <a href="#archived-invoices" class="inh-menu">
+                    <ui:msg key="submenu.moneyin.view.archived.invoices">View Archived Invoices
+                    </ui:msg>
+                </a>
+            </dt>
+            <!-- todo <dt class="inh-menu">-->
+            <!--<a href="#" class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyin.view.recurring.invoices">View Recurring Invoices-->
+            <!--</ui:msg>-->
+            <!--</a>-->
+            <!--</dt>-->
+            <!--todo <dt class="inh-menu-end">-->
+            <!--<a href="#" class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyin.view.payment.history">View Payment History</ui:msg>-->
+            <!--</a>-->
+            <!--</dt>-->
+        </dl>
+    </g:HTMLPanel>
+</ui:UiBinder> 

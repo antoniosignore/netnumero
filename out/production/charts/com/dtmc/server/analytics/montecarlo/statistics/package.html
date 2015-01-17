@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+    <TITLE>Package description: <code>Statistics</code></TITLE>
+</HEAD>
+<BODY>
+
+<H2>Package description: <code>Statistics</code></H2>
+
+<p>This is the main package defining <code>RandomVariables</code> and
+    <code>RandomVectors</code>. Each of these classes becomes concrete by defining
+    a single abstract method <code>getValue(int t)</code> intepreted as the next
+    draw from the underlying distribution conditioned on all information available
+    at time <code>t</code>. Typically this information is the state of the path
+    <code>s&#949;[0,t]-&gt X(s)</code> of some stochastic process
+    <code>X</code> up to time <code>t</code>.</p>
+
+<p>Random variables and vectors have a variety of methods to compute statistics
+    associated with the underlying distribution. Histograms are also supported.
+    Random vectors are necessary if we have to deal with correlations and have a
+    method to compute the covariation matrix. One call to the underlying stochastic
+    mechanism produces the next sample for each coordinate. Separate random
+    variables make separate calls to the underlying stochastic mechanism and thus
+    appear to be independent.</p>
+
+<p>There is also a utility class <code>FinMath</code> containing some
+    static methods which are useful in financial mathematics: the Black-Scholes
+    formula, solving for implied volatlities, cumulative normal and inverse
+    cumulative normal distribution function etc.</p>
+
+<p>The various <code>data source</code> classes make the connection to the
+    <code>jas</code> (java analyis studio) library to support the computation
+    and display of histograms.</p>
+
+
+</BODY>
+</HTML>

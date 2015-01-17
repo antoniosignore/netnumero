@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:n="urn:import:com.numhero.client.widget"
+             xmlns:nhiw="urn:import:com.numhero.client.mvp.home"
+             xmlns:nhmi="urn:import:com.numhero.client.mvp.moneyin">
+    <ui:style>
+        /* Add CSS here. See the GWT docs on UI Binder for more details */
+        .important {
+            font-weight: bold;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="sub-container">
+
+            <div class="left-panel">
+                <n:TitleLevelTwo>
+                    <ui:msg key="invoices">Static Content</ui:msg>
+                </n:TitleLevelTwo>
+            </div>
+
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>
+ 

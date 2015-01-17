@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <dl class="inh-menu">
+            <dt class="inh-menu">
+                <a href="#facebook" class="inh-menu">
+                    <ui:msg key="submenu.dynamicContent.create.facebook">Configure Facebook</ui:msg>
+                </a>
+            </dt>
+            <!-- todo <dt class="inh-menu">-->
+            <!--<a href="#" class="inh-menu">-->
+            <!--<ui:msg key="submenu.staticContent.view.recurring.invoices">View Recurring Invoices-->
+            <!--</ui:msg>-->
+            <!--</a>-->
+            <!--</dt>-->
+            <!--todo <dt class="inh-menu-end">-->
+            <!--<a href="#" class="inh-menu">-->
+            <!--<ui:msg key="submenu.staticContent.view.payment.history">View Payment History</ui:msg>-->
+            <!--</a>-->
+            <!--</dt>-->
+        </dl>
+    </g:HTMLPanel>
+</ui:UiBinder> 

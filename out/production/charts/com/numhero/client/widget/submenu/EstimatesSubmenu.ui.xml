@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <dl class="inh-menu">
+            <dt class="inh-menu">
+                <a href="#estimate" class="inh-menu">
+                    <ui:msg key="submenu.moneyin.create.estimate">Create An Estimate</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu">
+                <a href="#estimates" class="inh-menu">
+                    <ui:msg key="submenu.moneyin.view.recent.estimates">View Most Recent Estimates</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu-end">
+                <a href="#archived-estimates" class="inh-menu">
+                    <ui:msg key="submenu.moneyin.view.archived.estimates">View Archived Estimates</ui:msg>
+                </a>
+            </dt>
+
+            <!-- todo <dt class="inh-menu-end">-->
+            <!--<a href="#" class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyin.view.estimate.history">View Estimate History</ui:msg>-->
+            <!--</a>-->
+            <!--</dt>-->
+        </dl>
+    </g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+    <TITLE>ArrayClasses package description</TITLE>
+</HEAD>
+<BODY>
+<H2>ArrayClasses package description.</H2>
+
+<p>This package contains several two and three dimensional ragged array structures
+    (triangular matrices and arrays of triangular matrices).</p>
+
+<p><b>Libor process.</b>
+    The intended domain of application is the Libor process.
+    To simulate the time step <code>T_t-&gt T_{t+1}</code> of the forward Libors
+    we need the matrix <code>CV[t]</code> with entries
+</p>
+<center>
+    <code>
+        CV[t]_ij=int_{T_t}^{T_{t+1}}sigma_i(s)sigma_j(s)rho_ijds
+    </code>
+</center>
+</p>
+
+<p>and its Cholesky root <code>L[t]</code>. These matrices are path
+    independent and so path simulation can be sped up by storing them in the
+    <code>LiborProcess</code> object. Since <code>L[t]</code> is lower
+    triangular and <code>CV[t]</code> is symmetric we have the option to store
+    the lower triangular half of these matrices only.</p>
+
+<p>However in the simulation of the time steps the natural index range
+    for the matrix entries is not zero based. Moreover matrix multiplication
+    could be used to formulate the time step in vector form. A path simulation
+    will go through the sequence of these matrices in a three dimensional loop
+    and is consequently computationally intensive. Speed is thus of the utmost
+    importance.</p>
+
+<p>A desire to store the sequence of these matrices in a custom data structure
+    (rather than a raw java array) results from various sources:
+
+<p>
+<ul>
+    <li>Use of matrix algebra and predefined matrix packages.</li>
+    <li>The need to use indices not starting at zero and hence the desire to
+        let accessor functions do the shift of index values to zero based
+        arrays.
+    </li>
+    <li>The idea that one dimensional contiguous memory allocation might improve
+        data flow beween memory and L2-cache. Index arithmetic then has to be
+        used to introduce the matrix structure.
+    </li>
+</ul>
+</p>
+
+<p>The finding of (naive) experiments ({@link Examples.Array.ArrayTiming})
+    is that raw java arrays provide the best performance.
+    Contiguous memory allocation has very little beneficial effect, even the akward
+    index arithmetic such as in the class {@link ArrayClasses.UTRContiguousArray})
+    does not impose a significant penalty but <strong>accessor function calls add
+        significant overhead</strong>. Quite possibly accessor functions obscure the
+    way in which loops traverse memory so compiler optimizations are no longer possible.
+</p>
+
+<p>Other schemes such as storing the base address (reference) of a the subarray
+    which is entered by a loop before the loop is entered and so reducing index
+    calculations in the loop also has no benficial effect and can even
+    be harmful.</p>
+
+<p>However reducing the size of the data has a significant effect.
+    For example if triangular matrices are stored as square matrices with zeroes
+    (approximately doubling the size) speed slows down by a factor of nearly two.
+    This happens even if only the nonzero entries are accessed and both the smaller
+    and larger structures are far too large to fit in the L2-cache.
+</p>
+
+<p>The upshot is that raw java arrays and straightforward loops provide the
+    fastest performance and the size of these arrays should be kept as small as
+    the problem allows.</p>
+
+<p>Consequently the structures {@link ArrayClasses.LTRMatrixArray} and
+    {@link ArrayClasses.UTRMatrixArray} have been chosen to implement the above
+    mentioned matrix sequences in the <code>LiborProcess</code>, see
+    {@link Libor.LiborProcess.FactorLoading}).
+    The classes {@link ArrayClasses.LowerTriangularArray} and
+    {@link ArrayClasses.UpperTriangularArray}
+    are also used in the {@link Libor.LiborProcess}.
+    The other classes are here merely for speed experiments.</p>
+
+<p><b>Loops should follow the layout of arrays in memory:</b>
+    two dimensional java arrays <code>A</code> which are allocated with repeated
+    <code>new</code> are layered into memory row by row.
+    Make sure each loop traverses the array in the same
+    manner. In other words assume <code>A</code> was allocated as</p>
+
+<p>
+    <code>
+        double[][] A=new double[n][]; <br>
+        for(int i=0;i&lt;n;i++) A[i]=new double[n];
+    </code>
+</p>
+then do
+<p>
+    <code>
+        for(int i=0;i&lt;n;i++)<br>
+        for(int j=0;j&lt;n;j++){ ...A[i][j]...}
+    </code>
+</p>
+but do <strong>not</strong> do
+<p>
+    <code>
+        for(int j=0;j&lt;n;j++)<br>
+        for(int i=0;i&lt;n;i++){ ...A[i][j]...}
+    </code>
+</p>
+
+<p>even if this corresponds to the natural order of the problem.
+    Just think about how the second loop jumps around in memory and how blocks will
+    be moved back and forth from memory to the cache with minimal use of the data
+    in the block.</p>
+
+</BODY>
+</HTML>

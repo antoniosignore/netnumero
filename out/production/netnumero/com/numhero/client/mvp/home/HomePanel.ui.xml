@@ -1,0 +1,205 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             xmlns:nhex="urn:import:com.numhero.client.mvp.home"
+             xmlns:nhextr="urn:import:com.numhero.client.mvp.report.recentTransactions"
+             ui:defaultLocale="en"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="Home" ui:generateLocales="default"
+             xmlns:d="urn:import:com.numhero.client.mvp.document"
+             xmlns:h="urn:import:com.numhero.client.mvp.home">
+    <ui:style>
+
+    </ui:style>
+    <gwt:VerticalPanel>
+        <gwt:HorizontalPanel width="100%">
+            <gwt:HorizontalPanel width="100%" styleName="dashboard-title-box">
+                <gwt:VerticalPanel width="100%">
+                    <gwt:cell>
+                        <gwt:HTMLPanel>
+                            <nhw:TitleLevelOne>
+                                <ui:msg key="home.dashboard">Dashboard</ui:msg>
+                            </nhw:TitleLevelOne>
+                            <p>
+                                <ui:msg key="home.dashboard.text">Welcome to the real time dashboard, here you
+                                    will find a summary of your latest transactions and shortcuts
+                                    to
+                                    commonly used functions.
+                                </ui:msg>
+                            </p>
+                        </gwt:HTMLPanel>
+                    </gwt:cell>
+                </gwt:VerticalPanel>
+                <gwt:VerticalPanel width="100%">
+                    <gwt:cell>
+                        <gwt:HTMLPanel>
+                            <!--<table class="inh-standard-recap" border="0" cellspacing="0"
+                                   cellpadding="0" width="200px">
+                                <tr>
+                                    <th>&nbsp; </th>
+                                    <th class="right">
+                                        <ui:msg key="home.month">Month</ui:msg>
+                                    </th>
+                                    <th class="right">
+                                        <ui:msg key="home.year">Year</ui:msg>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ui:msg key="home.turnover">Turnover</ui:msg>
+                                    </td>
+                                    <td class="right">&pound;3,500.00
+                                    </td>
+                                    <td class="right">&pound;18,500.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ui:msg key="home.cost">Cost</ui:msg>
+                                    </td>
+                                    <td class="right">&pound;3,500.00
+                                    </td>
+                                    <td class="right">&pound;18,500.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ui:msg key="home.profit">Profit</ui:msg>
+                                    </td>
+                                    <td class="right">&pound;3,500.00
+                                    </td>
+                                    <td class="right">&pound;18,500.00
+                                    </td>
+                                </tr>
+                            </table>
+                        --></gwt:HTMLPanel>
+                    </gwt:cell>
+                </gwt:VerticalPanel>
+            </gwt:HorizontalPanel>
+            <gwt:VerticalPanel width="400px" styleName="dashboard-buttons">
+                <gwt:HorizontalPanel styleName="dashboard-buttons-title">
+                    <nhw:TitleLevelTwo>I would like to...</nhw:TitleLevelTwo>
+                </gwt:HorizontalPanel>
+                <gwt:HorizontalPanel styleName="home-buttons-container">
+                    <gwt:cell width="190px">
+                        <nhw:NetNumeroButton href="#invoice" ui:field="btNewInvoice">
+                            <ui:msg key="home.create.an.invoice">Create an Invoice</ui:msg>
+                        </nhw:NetNumeroButton>
+                    </gwt:cell>
+                    <gwt:cell width="190px">
+                        <nhw:NetNumeroButton href="#estimate" ui:field="btNewEstimate">
+                            <ui:msg key="home.create.an.estimate">Create an Estimate</ui:msg>
+                        </nhw:NetNumeroButton>
+                    </gwt:cell>
+                </gwt:HorizontalPanel>
+                <gwt:HorizontalPanel styleName="home-buttons-container">
+                    <gwt:cell width="190px">
+                        <nhw:NetNumeroButton href="#projects" ui:field="btTimeTrack">
+                            <ui:msg key="home.track.time">Track Time</ui:msg>
+                        </nhw:NetNumeroButton>
+                    </gwt:cell>
+                    <gwt:cell width="190px">
+                        <nhw:NetNumeroButton href="#report" ui:field="btNewReport">
+                            <ui:msg key="home.generate.a.report">Generate a Report</ui:msg>
+                        </nhw:NetNumeroButton>
+                    </gwt:cell>
+                </gwt:HorizontalPanel>
+            </gwt:VerticalPanel>
+        </gwt:HorizontalPanel>
+
+        <gwt:HorizontalPanel width="100%">
+            <nhw:DividerLine/>
+        </gwt:HorizontalPanel>
+
+        <!-- start main recap -->
+        <gwt:HorizontalPanel width="100%">
+            <gwt:VerticalPanel width="100%" styleName="dashboard-tables">
+                <!-- start moneyin -->
+                <gwt:HorizontalPanel>
+                    <gwt:cell>
+                        <gwt:HTMLPanel>
+                            <nhw:TitleLevelOne>
+                                <ui:msg key="home.moneyin">Money In</ui:msg>
+                            </nhw:TitleLevelOne>
+                            <nhw:TitleLevelThree>
+                                <ui:msg key="home.keyfigures">Key Figures</ui:msg>
+                            </nhw:TitleLevelThree>
+                            <gwt:Label styleName="text-label">
+                                <ui:msg key="home.moneyin.keyfigures">
+                                    Manage your invoices, estimates, products or services here.
+                                </ui:msg>
+                            </gwt:Label>
+                        </gwt:HTMLPanel>
+                    </gwt:cell>
+                </gwt:HorizontalPanel>
+                <gwt:VerticalPanel width="100%" height="100%" styleName="dashboard-moneyin-table">
+                    <nhw:TitleLevelThree>
+                        <ui:msg key="home.latesttransaction">Latest Transaction</ui:msg>
+                    </nhw:TitleLevelThree>
+
+                    <nhex:InvoicesRecapTable ui:field="invoicesRecapPanel"/>
+
+                    <gwt:HorizontalPanel width="100%">
+                        <nhw:DividerLine/>
+                    </gwt:HorizontalPanel>
+
+                </gwt:VerticalPanel>
+                <!-- end moneyin -->
+                <!-- start moneyout -->
+                <gwt:HorizontalPanel>
+                    <gwt:cell>
+                        <gwt:HTMLPanel>
+                            <nhw:TitleLevelOne>
+                                <ui:msg key="home.moneyout">Money Out</ui:msg>
+                            </nhw:TitleLevelOne>
+                            <nhw:TitleLevelThree>
+                                <ui:msg key="home.keyfigures">Key Figures</ui:msg>
+                            </nhw:TitleLevelThree>
+                            <gwt:Label styleName="text-label">
+                                <ui:msg key="home.moneyout.keyfigures">
+                                    Manage your expenses here.
+                                </ui:msg>
+                            </gwt:Label>
+                        </gwt:HTMLPanel>
+                    </gwt:cell>
+                </gwt:HorizontalPanel>
+                <gwt:VerticalPanel width="100%" styleName="dashboard-moneyout-table">
+                    <nhw:TitleLevelThree>
+                        <ui:msg key="home.latesttransaction">Latest Transaction</ui:msg>
+                    </nhw:TitleLevelThree>
+                    <nhex:ExpensesRecapTable ui:field="expensesRecapPanel"/>
+                </gwt:VerticalPanel>
+                <!-- end moneyout -->
+            </gwt:VerticalPanel>
+            <gwt:VerticalPanel width="100%" styleName="dashboard-recent-activity" height="100%">
+                <nhw:TitleLevelOne>
+                    <ui:msg key="home.recent.activity">Recent Activity</ui:msg>
+                </nhw:TitleLevelOne>
+                <nhex:HomeRecentTransactionsTable ui:field="homeRecentTransactionsTable"/>
+            </gwt:VerticalPanel>
+        </gwt:HorizontalPanel>
+        <!-- end main recap -->
+        <gwt:HorizontalPanel width="100%">
+            <nhw:DividerLine/>
+        </gwt:HorizontalPanel>
+    </gwt:VerticalPanel>
+</ui:UiBinder> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

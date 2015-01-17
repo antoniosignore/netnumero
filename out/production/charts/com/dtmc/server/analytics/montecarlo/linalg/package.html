@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+    <TITLE>Package description: <code>Libor</code></TITLE>
+</HEAD>
+<BODY>
+
+<H2>Package description: <code>LinAlg</code></H2>
+
+<p>This is a wrapper for the <code>com.vodafone.global.ngp.editorial.server.cern.colt.matrix.impl</code> classes
+    <code>DenseDoubleMatrix1D</code> and <code>DenseDoubleMatrix2D</code>.
+    The purpose is to rewrite the interface to the <code>blas</code> in more
+    palatable and programming like form (<code>plusEquals, timesEquals,...</code>).
+</p>
+
+<p>However every layer adds a little weight. If greatest speed is necessary in
+    loops it is best to work with raw java arrays which can be handed to matrix
+    constructors if linear algebra operations are absolutely necessary.</p>
+
+<p>Thank God for the
+    <a href=http://tilde-hoschek.home.cern.ch/~hoschek/colt/V1.0.1/doc/overview-summary.html>colt</a>
+    library. Numerical Linear Algebra is a nontrivial subject.
+</p>
+
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+    <TITLE>To Do</TITLE>
+</HEAD>
+<BODY>
+
+<H2>To Do</H2>
+
+
+<H3>Class Random</H3>
+
+The basic routine <code>Random.STN()</code> which generates all the standard
+normal increments driving every dynamics except QMC-dynamics is still Box-Muller
+based. Switch to Inverse Normal CDF.
+
+<H3>Classes RandomVariable, RandomVector</H3>
+
+Having methods reporting computational progress to a progress bar which is a
+parameter is only useful if the computation is reported to some GUI containing
+the progress bar. It would have been better if a separate window is opened up
+for the progress bar. We can still do this with minimal effort by adding
+methods of the type:
+<br>
+<br>
+<code>
+    public double expectation(int t, int N, boolean progressReport, String messsage)<br>
+    {<br>
+    .....if(progressReport)<br>
+    .....{<br>
+    ..........allocate window with a jProgressBar jPgrBar;<br>
+    ..........expectation(t,N,jPgrBar);<br>
+    .....}<br>
+    .....else{ expectation(t,N); }<br>
+    }<br>
+</code>
+<br>
+<br>
+The message string identifies the computation and indicates that it can be
+killed by closing the window. Copy the Window allocation code from the class
+<code>LoopStatus</code>
+For each method add a stand alone progress report enabled version.
+
+
+</BODY>
+</HTML>

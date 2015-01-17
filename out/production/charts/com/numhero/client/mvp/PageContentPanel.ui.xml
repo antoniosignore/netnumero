@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:n="urn:import:com.numhero.client.widget">
+    <ui:style>
+    </ui:style>
+    <g:VerticalPanel width="100%">
+        <n:MainTitlePanel ui:field="titlePanel"/>
+        <n:DetailTitlePanel ui:field="detailTitlePanel"/>
+        <g:VerticalPanel ui:field="tableContainer" width="100%"/>
+    </g:VerticalPanel>
+</ui:UiBinder> 

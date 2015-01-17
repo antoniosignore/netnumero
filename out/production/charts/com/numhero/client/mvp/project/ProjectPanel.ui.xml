@@ -1,0 +1,334 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwtdate="com.google.gwt.user.datepicker.client" xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:nhwtb="urn:import:com.numhero.client.widget.textbox"
+             xmlns:nhiw="urn:import:com.numhero.client.mvp.project"
+             xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+             xmlns:nhcsw="urn:import:com.numhero.client.mvp.clientsupplier"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui" ui:defaultLocale="en"
+             xmlns:nhte="urn:import:com.numhero.client.mvp.timeentry"
+             xmlns:nhex="urn:import:com.numhero.client.mvp.project"
+             xmlns:nhho="urn:import:com.numhero.client.mvp.home"
+             xmlns:nhcur="urn:import:com.numhero.client.mvp.currency"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="ProjectPanel" ui:generateLocales="default">
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:DisclosurePanel ui:field="errorsPanel"
+                             styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="8">
+                            <ui:msg key="project.details">Project Details</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="name">Name</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="name" width="238px"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="description">Description</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="5" width="100%">
+                            <gwt:TextBox ui:field="description" width="100%"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="client">Client</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:DropDownBox tabIndex="1" ui:field="sbClient"/>
+                        </td>
+
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="status">Status</ui:msg>
+                            </gwt:Label>
+                        </td>
+
+                        <td class="formItem">
+                            <nhcb:ProjectStateEnumComboBox ui:field="cbState"/>
+                        </td>
+
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="last.billed">Last Billed</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:Label ui:field="lastBilled"/>
+                        </td>
+
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="created">Created</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:Label ui:field="created"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="currency">Currency</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:CurrencySelect ui:field="cbCurrency"/>
+                        </td>
+
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="billable.price">Billable Price</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:Label ui:field="valuationLabel"/>
+                        </td>
+
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="total.hours">Total Billed Hours</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:Label ui:field="totalTime"/>
+                        </td>
+
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="billable.hours">Unbilled Hours</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:Label ui:field="billableTime"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="6">
+                            <ui:msg key="billing.method">Billing Method</ui:msg>
+                            <nhcb:BillingMethodComboBox ui:field="billingMethod"/>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ui:field="billingFlatRateRow">
+                        <td class="form-item-label" colspan="5">
+                            <gwt:Label>
+                                <ui:msg key="billing.flat.price">Billing Flat Price</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhwtb:NumberTextBox ui:field="billingFlatRate"/>
+                        </td>
+                    </tr>
+                    <tr ui:field="billingRateRow">
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="billing.rate">Billing Rate</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhwtb:NumberTextBox ui:field="billingRate"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="timeUnit">Time Unit</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="3">
+                            <nhcb:TimeUnitComboBox ui:field="timeUnit"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <gwt:DisclosurePanel width="100%" open="true" ui:field="taskGroup">
+                <gwt:header>
+                    <ui:msg key="project.tasks">Tasks</ui:msg>
+                </gwt:header>
+                <gwt:HTMLPanel>
+                    <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td class="formItem">
+                                    <nhiw:ProjectTasksDetailsTable
+                                            cellPadding="0" cellSpacing="0" ui:field="projectTasksDetailsTable"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height:54px;">
+                                    <nhw:NetNumeroButton ui:field="btAddTask">
+                                        <ui:msg key="project.add.task">Add task</ui:msg>
+                                    </nhw:NetNumeroButton>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </gwt:HTMLPanel>
+            </gwt:DisclosurePanel>
+        </gwt:HTMLPanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <gwt:DisclosurePanel width="100%" open="true" ui:field="staffGroup">
+                <gwt:header>
+                    <ui:msg key="team">Team</ui:msg>
+                </gwt:header>
+                <gwt:HTMLPanel>
+                    <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td class="formItem" colspan="2">
+                                    <nhiw:ProjectStaffDetailsTable cellPadding="0" cellSpacing="0"
+                                                                   ui:field="projectStaffDetailsTable"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height:54px;" colspan="2">
+                                    <nhw:NetNumeroButton ui:field="btAddStaff">
+                                        <ui:msg key="add.staff">Add Staff</ui:msg>
+                                    </nhw:NetNumeroButton>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </gwt:HTMLPanel>
+            </gwt:DisclosurePanel>
+        </gwt:HTMLPanel>
+
+        <!--<div id="warning-message">-->
+        <!--<gwt:Label ui:field="noTimeEntriesLabel">-->
+        <!--<ui:msg key="no.time.entries">No time entries found to be billed.</ui:msg>-->
+        <!--</gwt:Label>-->
+        <!--</div>-->
+
+        <gwt:HTMLPanel>
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="from.date">From Date</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox ui:field="from"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="to.date">To Date</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox ui:field="to"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <br></br>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <gwt:DisclosurePanel width="100%" open="true" ui:field="hoursGroup">
+                <gwt:header>
+                    <ui:msg key="hours.to.be.billed">Check hours to invoice</ui:msg>
+                </gwt:header>
+                <gwt:HTMLPanel>
+                    <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td class="formItem" colspan="4">
+                                    <nhte:TimeEntriesTable ui:field="timeEntriesTable"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </gwt:HTMLPanel>
+            </gwt:DisclosurePanel>
+        </gwt:HTMLPanel>
+
+        <!--<div id="warning-message">-->
+        <!--<gwt:Label ui:field="noExpensesLabel">-->
+        <!--<ui:msg key="no.expenseReceipts">No Receipts found to be billed.</ui:msg>-->
+        <!--</gwt:Label>-->
+        <!--</div>-->
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <gwt:DisclosurePanel width="100%" open="true" ui:field="expensesGroup">
+                <gwt:header>
+                    <ui:msg key="check.receipts.to.bill">Check receipts to invoice</ui:msg>
+                </gwt:header>
+                <gwt:HTMLPanel>
+                    <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td class="formItem" colspan="4">
+                                    <nhex:ProjectExpensesTable ui:field="expensesTable"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </gwt:HTMLPanel>
+            </gwt:DisclosurePanel>
+        </gwt:HTMLPanel>
+
+        <gwt:HorizontalPanel styleName="buttonsPanel">
+
+            <nhw:NetNumeroButton ui:field='btSave'>
+                <ui:msg key="save">Save</ui:msg>
+            </nhw:NetNumeroButton>
+
+            <nhw:NetNumeroButton ui:field="btGenerateInvoice">
+                <ui:msg key="generate.invoice">Generate Invoice</ui:msg>
+            </nhw:NetNumeroButton>
+
+            <nhw:NetNumeroButton ui:field="btGenerateEstimate">
+                <ui:msg key="generate.estimate">Generate Estimate</ui:msg>
+            </nhw:NetNumeroButton>
+
+            <nhw:NetNumeroButton ui:field="btConvert">
+                <ui:msg key="convert.currency">Currencies Converter</ui:msg>
+            </nhw:NetNumeroButton>
+
+            <nhw:NetNumeroButton ui:field="btCancel">
+                <ui:msg key="cancel">Cancel</ui:msg>
+            </nhw:NetNumeroButton>
+
+        </gwt:HorizontalPanel>
+
+        <!--<nhcur:CurrencyPanel ui:field="currencyPanel"/>-->
+
+    </gwt:HTMLPanel>
+
+</ui:UiBinder>

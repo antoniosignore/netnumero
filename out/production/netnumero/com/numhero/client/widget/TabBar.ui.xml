@@ -1,0 +1,428 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+             xmlns:s="urn:import:com.numhero.client.widget.submenu">
+
+    <gwt:HTMLPanel styleName="main-menu">
+        <ul class="first-level">
+
+            <li ui:field="dashboard">
+                <a class="inh-tab" href="#dashboard">
+                    <span>
+                        <ui:msg key="menu.dashboard.title">Dashboard</ui:msg>
+                    </span>
+                </a>
+            </li>
+
+            <li ui:field="portfolios">
+                <a class="inh-tab" href="#portfolios">
+                    <span>
+                        <ui:msg key="portfolio">Portfolio</ui:msg>
+                    </span>
+                </a>
+                <ul class="second-level portfolios-menu">
+                    <li>
+                        <div class="menu-sub">
+                            <div class="cell">
+                                <div class="border-panel">
+                                    <h1 class="inh-menu">
+                                        <ui:msg key="portfolio.label">Portfolio</ui:msg>
+                                    </h1>
+                                    <p>
+                                        <ui:msg key="submenu.portfolio.description">Portoflio, stocks and other
+                                            instruments
+                                        </ui:msg>
+                                    </p>
+                                    <nhw:NetNumeroButton ui:field="btNewPortfolio">
+                                        <ui:msg key="create.portfolio">Create New Portfolio</ui:msg>
+                                    </nhw:NetNumeroButton>
+                                </div>
+                            </div>
+
+                            <div class="cell">
+                                <h3 class="inh-menu">
+                                    <ui:msg key="portfolios.title">Portfolio</ui:msg>
+                                </h3>
+                                <s:PortfoliosSubmenu/>
+                            </div>
+
+                            <div class="cell">
+                                <h3 class="inh-menu">
+                                    <ui:msg key="stocks.title">Stocks</ui:msg>
+                                </h3>
+                                <s:StocksSubmenu/>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li ui:field="tradingagents">
+                <a class="inh-tab" href="#tradingagents">
+                    <span>
+                        <ui:msg key="tradingagent">Trading Agent</ui:msg>
+                    </span>
+                </a>
+                <ul class="second-level tradingagents-menu">
+                    <li>
+                        <div class="menu-sub">
+                            <div class="cell">
+                                <div class="border-panel">
+                                    <h1 class="inh-menu">
+                                        <ui:msg key="tradingagent.label">Trading Agent</ui:msg>
+                                    </h1>
+                                    <p>
+                                        <ui:msg key="submenu.portfolio.description">Trading agents for stocks and other
+                                            instruments
+                                        </ui:msg>
+                                    </p>
+                                    <nhw:NetNumeroButton ui:field="btNewTradingAgent">
+                                        <ui:msg key="create.portfolio">Create New Trading Agent</ui:msg>
+                                    </nhw:NetNumeroButton>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <h3 class="inh-menu">
+                                    <ui:msg key="portfolios.title">Trading Agent</ui:msg>
+                                </h3>
+                                <s:TradingAgentsSubmenu/>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <!--<li ui:field="moneyin">-->
+            <!--<a class="inh-tab" href="#moneyin">-->
+            <!--<span>-->
+            <!--<ui:msg key="menu.moneyin.title">Money In</ui:msg>-->
+            <!--</span>-->
+            <!--</a>-->
+            <!--<ul class="second-level moneyin-menu">-->
+            <!--<li>-->
+            <!--<div class="menu-sub">-->
+            <!--<div class="cell">-->
+            <!--<div class="border-panel">-->
+            <!--<h1 class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyin.label">Money In</ui:msg>-->
+            <!--</h1>-->
+            <!--<p>-->
+            <!--<ui:msg key="submenu.moneyin.description">Easily manage the money coming into-->
+            <!--your business. Create new invoices and estimates or manage and track your-->
+            <!--products or services.-->
+            <!--</ui:msg>-->
+            <!--</p>-->
+            <!--<nhw:NetNumeroButton ui:field="btNewInvoice">-->
+            <!--<ui:msg key="button.create.invoice">Create An Invoice</ui:msg>-->
+            <!--</nhw:NetNumeroButton>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyin.invoices.title">Invoices</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:InvoicesSubmenu/>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyin.estimates.title">Estimates</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:EstimatesSubmenu/>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyin.items.title">Items</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:ItemsSubmenu/>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+
+            <!--<li ui:field="moneyout">-->
+            <!--<a class="inh-tab" href="#moneyout">-->
+            <!--<span>-->
+            <!--<ui:msg key="menu.moneyout.title">Money Out</ui:msg>-->
+            <!--</span>-->
+            <!--</a>-->
+            <!--<ul class="second-level moneyout-menu">-->
+            <!--<li>-->
+            <!--<div class="menu-sub">-->
+            <!--<div class="cell">-->
+            <!--<div class="border-panel">-->
+            <!--<h1 class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyout.label">Money out</ui:msg>-->
+            <!--</h1>-->
+            <!--<p>-->
+            <!--<ui:msg key="submenu.moneyout.description">-->
+            <!--Manage the money going out of your business. Create business expenses, pay-->
+            <!--your staff and suppliers or manage your taxes.-->
+            <!--</ui:msg>-->
+            <!--</p>-->
+            <!--<nhw:NetNumeroButton ui:field="btNewExpense">-->
+            <!--<ui:msg key="button.create.expense">Create An Expense</ui:msg>-->
+            <!--</nhw:NetNumeroButton>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyout.expenses.title">Expenses</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:ExpensesSubmenu/>-->
+            <!--</div>-->
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.moneyout.taxes.title">Taxes</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:TaxesSubmenu/>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+
+            <!--<li ui:field="clients">-->
+            <!--<a class="inh-tab" href="#clients">-->
+            <!--<span>-->
+            <!--<ui:msg key="menu.clients.title">Clients</ui:msg>-->
+            <!--</span>-->
+            <!--</a>-->
+            <!--<ul class="second-level clients-menu">-->
+            <!--<li>-->
+            <!--<div class="menu-sub">-->
+            <!--<div class="cell">-->
+            <!--<div class="border-panel">-->
+            <!--<h1 class="inh-menu">-->
+            <!--<ui:msg key="submenu.clients.label">Clients</ui:msg>-->
+            <!--</h1>-->
+            <!--<p>-->
+            <!--<ui:msg key="submenu.clients.description">Manage your clients and suppliers-->
+            <!--here. Create new or amend existing details all with a few clicks.-->
+            <!--</ui:msg>-->
+            <!--</p>-->
+            <!--<nhw:NetNumeroButton ui:field="btNewClient">-->
+            <!--<ui:msg key="button.create.client">Create New Client</ui:msg>-->
+            <!--</nhw:NetNumeroButton>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.clients.clients.title">Clients</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:ClientsSubmenu/>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.clients.suppliers.title">Suppliers</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:SuppliersSubmenu/>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+
+            <!--<li ui:field="staff">-->
+
+            <!--<a class="inh-tab" href="#staff">-->
+            <!--<span>-->
+            <!--<ui:msg key="menu.staff.title">Staff</ui:msg>-->
+            <!--</span>-->
+            <!--</a>-->
+
+            <!--<ul class="second-level staff-menu">-->
+            <!--<li>-->
+            <!--<div class="menu-sub">-->
+            <!--<div class="cell">-->
+            <!--<div class="border-panel">-->
+            <!--<h1 class="inh-menu">-->
+            <!--<ui:msg key="submenu.staff.label">Staff</ui:msg>-->
+            <!--</h1>-->
+            <!--<p>-->
+            <!--<ui:msg key="submenu.staff.description">Internal staff details can be managed-->
+            <!--here along with your contractors. Easily create new or update existing-->
+            <!--details.-->
+            <!--</ui:msg>-->
+            <!--</p>-->
+            <!--<nhw:NetNumeroButton ui:field="btNewStaff">-->
+            <!--<ui:msg key="button.create.internal">Create Internal Staff</ui:msg>-->
+            <!--</nhw:NetNumeroButton>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.staff.internal.title">Internal Staff</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:InternalStaffSubmenu/>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.clients.staff.contractors.title">Contractors</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:ContractorsSubmenu/>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+
+            <!--<li ui:field="time">-->
+            <!--<a class="inh-tab" href="#projects">-->
+            <!--<span>-->
+            <!--<ui:msg key="menu.time.title">Time</ui:msg>-->
+            <!--</span>-->
+            <!--</a>-->
+            <!--<ul class="second-level time-menu">-->
+            <!--<li>-->
+            <!--<div class="menu-sub">-->
+            <!--<div class="cell">-->
+            <!--<div class="border-panel">-->
+            <!--<h1 class="inh-menu">-->
+            <!--<ui:msg key="submenu.time.label">Time</ui:msg>-->
+            <!--</h1>-->
+            <!--<p>-->
+            <!--<ui:msg key="submenu.time.description">Entering your timesheet has never been-->
+            <!--easier. Users may also manage projects and tasks all with a few clicks.-->
+            <!--</ui:msg>-->
+            <!--</p>-->
+            <!--<nhw:NetNumeroButton ui:field="btNewProject">-->
+            <!--<ui:msg key="button.create.project">Create New Project</ui:msg>-->
+            <!--</nhw:NetNumeroButton>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.time.tracktime.title">Track Time</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:TrackTimeSubmenu/>-->
+            <!--</div>-->
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.time.projects.title">Projects</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:ProjectsSubmenu/>-->
+            <!--</div>-->
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.time.tasks.title">Tasks</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:TasksSubmenu/>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+
+            <!--<li ui:field="accounts">-->
+            <!--<a class="inh-tab" href="#nominalLedgerAccounts">-->
+            <!--<span>-->
+            <!--<ui:msg key="menu.nominalLedgerAccounts.title">Accounts</ui:msg>-->
+            <!--</span>-->
+            <!--</a>-->
+            <!--<ul class="second-level nominalLedgerAccounts-menu">-->
+            <!--<li>-->
+            <!--<div class="menu-sub">-->
+            <!--<div class="cell">-->
+            <!--<div class="border-panel">-->
+            <!--<h1 class="inh-menu">-->
+            <!--<ui:msg key="submenu.nominalLedgerAccounts.label">Accounts</ui:msg>-->
+            <!--</h1>-->
+            <!--<p>-->
+            <!--<ui:msg key="submenu.nominalLedgerAccounts.description">Manage your bank account-->
+            <!--balances here. Deposits and withdrawals have never been simpler. Expense-->
+            <!--categories can also be administered.-->
+            <!--</ui:msg>-->
+            <!--</p>-->
+            <!--<nhw:NetNumeroButton ui:field="btNewAccount">-->
+            <!--<ui:msg key="button.create.nominalLedgerAccount">Create New Bank Account-->
+            <!--</ui:msg>-->
+            <!--</nhw:NetNumeroButton>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.nominalLedgerAccount.general.nominalLedgerAccount.title">-->
+            <!--General Accounts-->
+            <!--</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:GeneralAccountsSubmenu/>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+
+            <!--<li ui:field="reports">-->
+            <!--<a class="inh-tab" href="#reports">-->
+            <!--<span>-->
+            <!--<ui:msg key="menu.reports.title">Reports</ui:msg>-->
+            <!--</span>-->
+            <!--</a>-->
+            <!--<ul class="second-level reports-menu">-->
+            <!--<li>-->
+            <!--<div class="menu-sub">-->
+            <!--<div class="cell">-->
+            <!--<div class="border-panel">-->
+            <!--<h1 class="inh-menu">-->
+            <!--<ui:msg key="submenu.reports.label">Reports</ui:msg>-->
+            <!--</h1>-->
+            <!--<p>-->
+            <!--<ui:msg key="submenu.reports.description">Getting reports for your business is-->
+            <!--vital and we've made it really easy. Simply click on the report that your-->
+            <!--interested in and we'll show you all the details.-->
+            <!--</ui:msg>-->
+            <!--</p>-->
+            <!--<nhw:NetNumeroButton ui:field="btNewReport">-->
+            <!--<ui:msg key="button.create.report">Create New Report</ui:msg>-->
+            <!--</nhw:NetNumeroButton>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.reports.general.reports.title">General Reports</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:GeneralReportsSubmenu/>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.reports.moneyin.title">Money In Reports</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:MoneyinReportsSubmenu/>-->
+            <!--</div>-->
+
+            <!--<div class="cell">-->
+            <!--<h3 class="inh-menu">-->
+            <!--<ui:msg key="submenu.reports.moneyout.title">Money Out Reports</ui:msg>-->
+            <!--</h3>-->
+            <!--<s:MoneyoutReportsSubmenu/>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+
+
+            <!--<li ui:field="search">-->
+            <!--<a class="inh-tab">-->
+            <!--<span>-->
+            <!--<ui:msg key="menu.questionmark.title">?</ui:msg>-->
+            <!--</span>-->
+            <!--</a>-->
+            <!--</li>-->
+        </ul>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

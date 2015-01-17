@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+    </ui:style>
+    <g:HTMLPanel>
+        <dl class="inh-menu">
+            <dt class="inh-menu">
+                <a href="#contractor" class="inh-menu">
+                    <ui:msg key="submenu.staff.create.contractors">Create New Contractors</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu-end">
+                <a href="#contractors" class="inh-menu">
+                    <ui:msg key="submenu.staff.manage.contractors">Manage Contractors</ui:msg>
+                </a>
+            </dt>
+        </dl>
+    </g:HTMLPanel>
+</ui:UiBinder> 

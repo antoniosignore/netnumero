@@ -1,0 +1,127 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:nhtb="urn:import:com.numhero.client.widget.textbox"
+             xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+             xmlns:nhiw="urn:import:com.numhero.client.mvp.document"
+             xmlns:nhwcb="urn:import:com.numhero.client.widget.combobox"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             xmlns:nhew="urn:import:com.numhero.client.mvp.category"
+             ui:defaultLocale="en"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="ClientSupplier"
+             ui:generateLocales="default">
+
+    <gwt:HTMLPanel>
+
+        <gwt:DisclosurePanel ui:field="errorsPanel" styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table ui:field="teMain" class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <gwt:Label>
+                                <ui:msg key="expense.details">Expense Details</ui:msg>
+                            </gwt:Label>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="expense.supplier">Supplier</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhwcb:DropDownBox tabIndex="1" ui:field="sbPartner" width="338px"/>
+                        </td>
+
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="ledger.account">Category</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhew:CategorySelect ui:field="sbCategory"/>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="invoice.id">Supplier Invoice ID</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox tabIndex="3" ui:field="tbInvoiceID" width="338px"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="invoice.currency">Currency</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:CurrencySelect tabIndex="4" ui:field="cbCurrency"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="invoice.date.raised">Date Raised</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox tabIndex="5" ui:field="dateRaised"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="invoice.pay.at.date">Due Date</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox tabIndex="6" ui:field="dateDue"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="formItem" colspan="4">
+                            <gwt:FocusPanel tabIndex="7" ui:field="invoiceDetailsPanel"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:54px;" colspan="4">
+                            <nhw:NetNumeroButton tabIndex="8" href="javascript:;" ui:field="btAddInvoiceDetail">
+                                <ui:msg key="invoice.add.item">Add Item</ui:msg>
+                            </nhw:NetNumeroButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="invoice.notes">Notes</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="3">
+                            <gwt:TextArea tabIndex="10" width="100%" ui:field="taNotes"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+        <gwt:HorizontalPanel styleName="buttonsPanel" horizontalAlignment="ALIGN_RIGHT">
+            <nhw:NetNumeroButton tabIndex="10" href="javascript:;" ui:field="btSave">
+                <ui:msg key="button.save">Save</ui:msg>
+            </nhw:NetNumeroButton>
+            <!--             <nhw:NetNumeroButton tabIndex="11" href="javascript:;" ui:field="btPrintAsPDF">
+               <ui:msg key="invoice.printAsPDF">View PDF</ui:msg>
+           </nhw:NetNumeroButton> -->
+            <nhw:NetNumeroButton tabIndex="12" ui:field="btCancel">
+                <ui:msg key="button.cancel">Cancel</ui:msg>
+            </nhw:NetNumeroButton>
+        </gwt:HorizontalPanel>
+    </gwt:HTMLPanel>
+
+</ui:UiBinder>

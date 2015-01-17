@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+    <TITLE>Package description: <code>Triggers</code></TITLE>]
+</HEAD>
+<BODY>
+
+<H2>Package description: <code>Triggers</code></H2>
+
+<p>A trigger observes the price path of an asset and triggers an event if a
+    certain condition is has been met since the last time the event was triggered
+    (for example if the asset price has moved 10% up or down). The intended
+    application is as a signal to initiate the next trade in a trading strategy.
+    The most obvious triggers are implemented:
+<ul>
+    <li><code>NullTrigger</code> event is triggered only at the horizon.</li>
+    <li><code>TriggerPeriodic</code> event is triggered in equal time intervals.
+    </li>
+    <li><code>TriggerOnPercentChange</code> event is triggered as soon as the asset
+        price has moved a set percentage.
+    </li>
+</ul>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui" ui:defaultLocale="en"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="Footer" ui:generateLocales="default">
+    <ui:style>
+    </ui:style>
+    <gwt:HTMLPanel styleName="footer">
+        <div id="footer-content">
+            <!--<div class="link-bar">-->
+                <!--<ul>-->
+                    <!--<li class="bar">-->
+                        <!--<gwt:Anchor href="javascript:;" styleName="inh-standard" ui:field="reportBug">Report a Bug-->
+                        <!--</gwt:Anchor>-->
+                    <!--</li>-->
+                    <!--<li class="bar">-->
+                        <!--<a class="inh-standard" href="http://www.netnumero.com/terms/">-->
+                            <!--<ui:msg key="footer.terms.of.service">Terms of Service</ui:msg>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="bar">-->
+                        <!--<gwt:Anchor href="javascript:;" styleName="inh-standard" ui:field="contactUs">Contact Us-->
+                        <!--</gwt:Anchor>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a class="inh-standard" href="mailto:contact@netnumero.com?subject=Application Enquiry">-->
+                    <!--<ui:msg key="footer.contact.us">Contact Us</ui:msg>-->
+                    <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="info">-->
+                <!--<strong class="logo">-->
+                    <!--<a href="/index.html"></a>-->
+                <!--</strong>-->
+                <!--<p>-->
+                    <!--<ui:msg key="footer.copyright">&copy; Copyright 2010</ui:msg>-->
+                    <!--<a class="inh-standard" href="http://www.netnumero.com">-->
+                        <!--<ui:msg key="footer.inumero.ltd">Net Numero Ltd.</ui:msg>-->
+                    <!--</a>-->
+                    <!--<ui:msg key="footer.all'rights.reserved">All rights reserved.</ui:msg>-->
+                <!--</p>-->
+            <!--</div>-->
+
+        </div>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

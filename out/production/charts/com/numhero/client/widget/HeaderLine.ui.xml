@@ -1,0 +1,70 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:gwt='urn:import:com.google.gwt.user.client.ui' ui:defaultLocale="en"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="HeaderLine" ui:generateLocales="default">
+
+    <ui:style type="com.numhero.client.widget.HeaderLine.HeaderLineStyle">
+        .topline {
+        margin: 0px;
+        text-align: right;
+        padding: 5px 0;
+        margin-left: 0;
+        font-size: 12px;
+        }
+
+        .topline li {
+        list-style: none;
+        margin: 0;
+        display: inline;
+        }
+
+        .topline li a {
+
+        }
+
+        .topline li a:link {
+
+        }
+
+        .topline li a:visited {
+
+        }
+
+        .topline li a:hover {
+
+        }
+
+        .topline li a.current {
+        color: #000;
+        background: #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+        }
+    </ui:style>
+
+    <gwt:HorizontalPanel width="100%" styleName="header-line">
+        <gwt:HTMLPanel styleName="header-line-left" width="100%">
+            <ul>
+                <li>
+                    <a ui:field="settings" href="#businessaccount">
+                        <ui:msg key="header.setting">Settings</ui:msg>
+                    </a>
+                </li>
+                <li>
+                    <a ui:field="help" href="https://www.appify.com/support" target="_blank">
+                        <ui:msg key="header.help">Help</ui:msg>
+                    </a>
+                </li>
+            </ul>
+        </gwt:HTMLPanel>
+        <gwt:HTMLPanel styleName="header-line-right" width="100%">
+            <span ui:field="currentDate" class="currentDate"></span>
+            |
+            <a ui:field="logout" href="http://www.appify.com/customer/account/logout" class="logoutButton">
+                <ui:msg key="header.logout">Logout</ui:msg>
+            </a>
+        </gwt:HTMLPanel>
+    </gwt:HorizontalPanel>
+</ui:UiBinder>

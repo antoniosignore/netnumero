@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p="urn:import:com.numhero.client.widget.panelsubmenu" xmlns:s="urn:import:com.numhero.client.widget.submenu">
+	<ui:style>
+	</ui:style>
+	<g:HTMLPanel styleName="panel-menu">
+		<ul class="first-level">
+			<li class="menu-title">
+				<ui:msg key="submenu.accounts.title">General Accounts</ui:msg>
+				<ul class="second-level">
+					<li>
+						<div id="menu-sub">
+							<div class="cell">
+								<s:GeneralAccountsSubmenu />
+							</div>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</g:HTMLPanel>
+</ui:UiBinder> 

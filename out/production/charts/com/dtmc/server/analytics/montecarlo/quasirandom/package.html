@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+    <TITLE>Package description: <code>QuasiRandom</code></TITLE>
+</HEAD>
+<BODY>
+
+<H2>Package description: <code>QuasiRandom</code></H2>
+
+<p>The Quasi Monte Carlo (QMC) package. Contains implementations of the
+    Halton, Sobol and Niederreiter-Xing generator in various dimensions:
+<ul>
+    <li><i>Halton:</i> unlimited (but useless in high dimensions)</li>
+    <li><i>Sobol:</i> up to dimension 300 but easily extended if more primitive
+        polynomials modulo two are obtained (see Peter Jaeckels book <i>Monte Carlo
+            Methods in Finance</i> which comes with a disk containing millions of
+        primitive polynomials, only one is needed for each dimension).
+    </li>
+    <li><i>Niederrreiter-Xing:</i> up to dimension 20. Lowest L2-discrepancy in each
+        dimension but there is no easy way to extend this to higher dimensions.
+    </li>
+</ul>
+Each low discrepancy sequence has 2 methods to compute its L2-discrepancy,
+straightforward (non optimized) algorithms are used. This means that this is
+very slow if the number of low discrepancy points is large.
+</p>
+
+<p>There are also some nasty test integrals (very narrow and tall spikes
+    all integrating to one in several dimensions) and a class to plot projections
+    of low discrepancy points onto two dimensional coordinate parallel subspaces
+    of the space in which the sequence lives.</p>
+
+
+</BODY>
+</HTML>

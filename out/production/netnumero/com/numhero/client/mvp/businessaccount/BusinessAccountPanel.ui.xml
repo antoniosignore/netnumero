@@ -1,0 +1,321 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:gwtdate="com.google.gwt.user.datepicker.client"
+             xmlns:nhw="urn:import:com.numhero.client.widget" xmlns:nhtb="urn:import:com.numhero.client.widget.textbox"
+             xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+             xmlns:nhimg="urn:import:com.numhero.client.widget.image"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             ui:defaultLocale="en"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="BusinessAccount"
+             ui:generateLocales="default">
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:DisclosurePanel ui:field="errorsPanel" styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <ui:msg key="businessaccount.organisational.details">Organisational Details</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="organisation.name">Organisation name</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbName" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="organisation.vat">VAT number</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbVat" width="100%"/>
+                        </td>
+                    </tr>
+
+                    <!--<tr>-->
+                    <!--<td class="form-item-label">-->
+                    <!--<gwt:Label>-->
+                    <!--<ui:msg key="business.nominalLedgerAccount.date.format">Date Format</ui:msg>-->
+                    <!--</gwt:Label>-->
+                    <!--</td>-->
+                    <!--<td class="formItem">-->
+                    <!--<nhcb:DateFormatComboBox ui:field="cbDateFormat"/>-->
+                    <!--</td>-->
+                    <!--</tr>-->
+
+                    <!--<tr>-->
+                    <!--<td class="form-item-label">-->
+                    <!--<gwt:Label>-->
+                    <!--<ui:msg key="business.nominalLedgerAccount.time.format">Time Format</ui:msg>-->
+                    <!--</gwt:Label>-->
+                    <!--</td>-->
+                    <!--<td class="formItem">-->
+                    <!--<nhcb:TimeFormatComboBox ui:field="cbTimeFormat"/>-->
+                    <!--</td>-->
+                    <!--</tr>-->
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <gwt:DisclosurePanel width="100%" open="false">
+                <gwt:header>
+                    <ui:msg key="organisation.logo">Logo</ui:msg>
+                </gwt:header>
+                <gwt:HTMLPanel>
+                    <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td class="form-item-label" colspan="4">
+                                    <table>
+                                        <tr>
+                                            <td style="padding-right: 20px; text-align: center">
+                                                <gwt:Label styleName="logoTitle">
+                                                    <ui:msg key="organisation.logoTitle">Your company logo</ui:msg>
+                                                </gwt:Label>
+                                                <br/>
+                                                <br/>
+                                                <gwt:Label styleName="logoSubTitle">
+                                                    <ui:msg key="organisation.logoSubtitle">Select an image file from
+                                                        your computer
+                                                    </ui:msg>
+                                                </gwt:Label>
+                                                <br/>
+                                                <gwt:FormPanel ui:field="fpUploadLogo" action="/uploadLogo"
+                                                               encoding="multipart/form-data" method="post">
+                                                    <gwt:HTMLPanel>
+                                                        <gwt:FileUpload ui:field="fuLogo" width="100%" name="logo"/>
+                                                        <gwt:Hidden ui:field="hBusinessAccountId"
+                                                                    name="businessAccountId"/>
+                                                    </gwt:HTMLPanel>
+                                                </gwt:FormPanel>
+                                            </td>
+                                            <td class="logo">
+                                                <nhimg:Image ui:field="imgLogo"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </gwt:HTMLPanel>
+            </gwt:DisclosurePanel>
+        </gwt:HTMLPanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0"
+                   width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <ui:msg key="business.nominalLedgerAccount.contact.information">Contact information</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.email">Email</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbEmail" width="100%"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.web">Web</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbWeb" width="100%"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.phone.number">Phone</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbPhone" width="100%"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.fax.number">Fax</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbFax" width="100%"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="6">
+                            <ui:msg key="business.nominalLedgerAccount.address.title">Address</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="address">Address</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="3">
+                            <gwt:TextBox ui:field="tbAddress" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="zip">Zip Code</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbZipCode" width="100%"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="city">City</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbCity" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="region">Region</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbRegion" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="country">Country</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:CountryComboBox ui:field="tbCountry" width="100%"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="6">
+                            <ui:msg key="business.nominalLedgerAccount.invoices">Invoices settings</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.prefixes">Invoice ID Prefix</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbInvoiceIDPrefix"/>
+                        </td>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.lastInvoiceID">Last Invoice ID</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhtb:NumberTextBox precision="0" ui:field="tbLastInvoiceID"/>
+                        </td>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.lastEstimateID">Last Estimate ID</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhtb:NumberTextBox precision="0" ui:field="tbLastEstimateID"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.currency">Currency</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:Label ui:field="cbCurrency"/>
+                        </td>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.default.days.due">Default Days Due</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhtb:NumberTextBox precision="0" ui:field="tbDefaultDaysDue"/>
+                        </td>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.invoiceColorScheme">Invoice color scheme
+                                </ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:ColorComboBox ui:field="cbColorScheme" width="100%"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="business.nominalLedgerAccount.terms.condition">Terms and Condition</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:TextArea ui:field="taTermsConditions" width="100%"/>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HorizontalPanel horizontalAlignment="ALIGN_RIGHT">
+            <nhw:NetNumeroButton href="javascript:;" ui:field="btSave">
+                <ui:msg key="save">Save</ui:msg>
+            </nhw:NetNumeroButton>
+            <nhw:NetNumeroButton href="javascript:;" ui:field="btCancel">
+                <ui:msg key="cancel">Cancel</ui:msg>
+            </nhw:NetNumeroButton>
+            <nhw:NetNumeroButton href="javascript:;" ui:field="btSkip">
+                <ui:msg key="skip">Skip</ui:msg>
+            </nhw:NetNumeroButton>
+        </gwt:HorizontalPanel>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

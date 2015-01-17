@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             xmlns:nhwt="urn:import:com.numhero.client.widget.search"
+             ui:defaultLocale="en" ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="DateRange" ui:generateLocales="default">
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:HTMLPanel>
+            <table class="formContainer" cellpadding="0" cellspacing="0">
+                <tbody>
+
+                    @UiField
+                    CustomFormatDateBox from;
+
+                    @UiField
+                    CustomFormatDateBox to;
+
+                    @UiField
+                    NetNumeroButton btRefresh;
+
+                    <tr>
+                        <td class="formItem">
+                            <strong>
+                                <nhw:FormItem titleWidth="200">
+                                    <gwt:Label>
+                                        <ui:msg key="searchFor">Search for</ui:msg>
+                                    </gwt:Label>
+                                    <gwt:TextBox ui:field="tbSearch"/>
+                                </nhw:FormItem>
+                            </strong>
+                        </td>
+
+                        <td class="formItem">
+                            <nhw:NetNumeroButton ui:field="btSearch">
+                                <ui:msg key="search">Search</ui:msg>
+                            </nhw:NetNumeroButton>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <nhwt:AbstractSearchTable styleName="invoiceDetails inh-standard" ui:field="searchTable"/>
+
+        <gwt:HorizontalPanel>
+            <nhw:NetNumeroButton href="javascript:;" ui:field="btCancel">
+                <ui:msg key="close">Close</ui:msg>
+            </nhw:NetNumeroButton>
+        </gwt:HorizontalPanel>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

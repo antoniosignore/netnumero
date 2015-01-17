@@ -1,0 +1,12 @@
+<application>
+    <pages>
+        <page kind="Home" title="Home" iconUrl="http://aslau.rohost.com/applify/ferrari-icon.png">
+            <background>http://aslau.rohost.com/applify/background.jpg</background>
+        </page>
+        <page kind="News" title="Maranello" iconUrl="http://aslau.rohost.com/applify/news.png"/>
+        <page kind="Wall" title="Fan Wall" iconUrl="http://aslau.rohost.com/applify/news.png"/>
+        <page kind="Images" title="Car Pics" iconUrl="http://aslau.rohost.com/applify/news.png"/>
+        <page kind="Tweeter" title="Tweets" iconUrl="http://aslau.rohost.com/applify/news.png"/>
+        <page kind="Music" title="Engine sounds" iconUrl="http://aslau.rohost.com/applify/news.png"/>
+    </pages>
+</application>

@@ -1,0 +1,224 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+             xmlns:s="urn:import:com.numhero.client.widget.submenu">
+
+    <gwt:HTMLPanel styleName="main-menu">
+        <ul class="first-level">
+
+            <li ui:field="dashboard">
+                <a class="inh-tab" href="#dashboard">
+                    <span>
+                        <ui:msg key="menu.dashboard.title">Dashboard</ui:msg>
+                    </span>
+                </a>
+            </li>
+
+
+
+                        <li ui:field="portfolios">
+                <a class="inh-tab" href="#portfolios">
+                    <span>
+                        <ui:msg key="portfolio">Portfolio</ui:msg>
+                    </span>
+                </a>
+                <ul class="second-level portfolios-menu">
+                    <li>
+                        <div class="menu-sub">
+                            <div class="cell">
+                                <div class="border-panel">
+                                    <h1 class="inh-menu">
+                                        <ui:msg key="portfolio.label">Portfolio</ui:msg>
+                                    </h1>
+                                    <p>
+                                        <ui:msg key="submenu.portfolio.description">Portoflio, stocks and other
+                                            instruments
+                                        </ui:msg>
+                                    </p>
+                                    <!--<nhw:NetNumeroButton ui:field="btNewPortfolio">-->
+                                        <!--<ui:msg key="create.portfolio">Create New Portfolio</ui:msg>-->
+                                    <!--</nhw:NetNumeroButton>-->
+                                </div>
+                            </div>
+
+                            <div class="cell">
+                                <h3 class="inh-menu">
+                                    <ui:msg key="portfolios.title">Portfolio</ui:msg>
+                                </h3>
+                                <s:PortfoliosSubmenu/>
+                            </div>
+
+                            <div class="cell">
+                                <h3 class="inh-menu">
+                                    <ui:msg key="stocks.title">Stocks</ui:msg>
+                                </h3>
+                                <s:StocksSubmenu/>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li ui:field="tradingagents">
+                <a class="inh-tab" href="#tradingagents">
+                    <span>
+                        <ui:msg key="tradingagent">Trading Agent</ui:msg>
+                    </span>
+                </a>
+            </li>
+
+
+
+
+            <!--<li ui:field="myapp">-->
+                <!--<a class="inh-tab" href="#myapp">-->
+                    <!--<span>-->
+                        <!--<ui:msg key="menu.myapp.title">My App</ui:msg>-->
+                    <!--</span>-->
+                <!--</a>-->
+                <!--<ul class="second-level myapp-menu">-->
+                    <!--<li>-->
+                        <!--<div class="menu-sub">-->
+                            <!--<div class="cell">-->
+                                <!--<div class="no-border-panel">-->
+                                    <!--<h1 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.myapp.label">My App</ui:msg>-->
+                                    <!--</h1>-->
+                                    <!--<p>-->
+                                        <!--<ui:msg key="submenu.myapp.description">Easily manage your Application. Make it available to customers on Android, IPhone-->
+                                        <!--</ui:msg>-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+
+            <!--<li ui:field="staticContent">-->
+                <!--<a class="inh-tab" href="#staticContent">-->
+                    <!--<span>-->
+                        <!--<ui:msg key="menu.staticContent.title">Static Content</ui:msg>-->
+                    <!--</span>-->
+                <!--</a>-->
+                <!--<ul class="second-level staticContent-menu">-->
+                    <!--<li>-->
+                        <!--<div class="menu-sub">-->
+                            <!--<div class="cell">-->
+                                <!--<div class="no-border-panel">-->
+                                    <!--<h1 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.label">Static Content</ui:msg>-->
+                                    <!--</h1>-->
+                                    <!--<p>-->
+                                        <!--<ui:msg key="submenu.staticContent.description">Easily manage your Application. Make it available to customers on Android, IPhone-->
+                                        <!--</ui:msg>-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.news.title">News</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:NewsSubmenu/>-->
+                                <!--</div>-->
+
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.music.title">Audio</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:MusicSubmenu/>-->
+                                <!--</div>-->
+
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.video.title">Video</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:VideoSubmenu/>-->
+                                <!--</div>-->
+
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.images.title">Image</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:ImageSubmenu/>-->
+                                <!--</div>-->
+
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.events.title">Events</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:EventsSubmenu/>-->
+                                <!--</div>-->
+
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.links.title">Links</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:LinksSubmenu/>-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+
+            <!--<li ui:field="dynamicContent">-->
+                <!--<a class="inh-tab" href="#dynamicContent">-->
+                    <!--<span>-->
+                        <!--<ui:msg key="menu.dynamicContent.title">Dynamic Content</ui:msg>-->
+                    <!--</span>-->
+                <!--</a>-->
+                <!--<ul class="second-level dynamicContent-menu">-->
+                    <!--<li>-->
+                        <!--<div class="menu-sub">-->
+                            <!--<div class="cell">-->
+                                <!--<div class="no-border-panel">-->
+                                    <!--<h1 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.dynamicContent.label">Dynamic Content</ui:msg>-->
+                                    <!--</h1>-->
+                                    <!--<p>-->
+                                        <!--<ui:msg key="submenu.dynamicContent.description">Easily manage your Application. Make it available to customers on Android, IPhone-->
+                                        <!--</ui:msg>-->
+                                    <!--</p>-->
+                                <!--</div>-->
+
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.youtube.title">YouTube</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:YouTubeSubmenu/>-->
+                                <!--</div>-->
+
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.facebook.title">Facebook</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:FacebookSubmenu/>-->
+                                <!--</div>-->
+
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.feed.title">Feed</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:FeedSubmenu/>-->
+                                <!--</div>-->
+
+                                <!--<div class="cell">-->
+                                    <!--<h3 class="inh-menu">-->
+                                        <!--<ui:msg key="submenu.staticContent.twitter.title">Twitter</ui:msg>-->
+                                    <!--</h3>-->
+                                    <!--<s:TwitterSubmenu/>-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+
+
+        </ul>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

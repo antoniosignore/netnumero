@@ -1,0 +1,105 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+        xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:gwtdate="com.google.gwt.user.datepicker.client"
+        xmlns:nhw="urn:import:com.numhero.client.widget"
+        xmlns:nhss="urn:import:com.numhero.client.mvp.staff"
+        xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+        xmlns:nhcsw="urn:import:com.numhero.client.mvp.clientsupplier"
+        xmlns:nhpw="urn:import:com.numhero.client.mvp.project"
+        xmlns:nhtw="urn:import:com.numhero.client.mvp.task"
+        ui:defaultLocale="en"
+        ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+        ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+        ui:generateFilename="FilterPanel" ui:generateLocales="default">
+
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+
+        <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <td colspan="14">
+                        <ui:msg key="filter">Filter</ui:msg>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+
+                    <td class="form-item-label">
+                        <gwt:Label>
+                            <ui:msg key="from.date">From Date</ui:msg>
+                        </gwt:Label>
+                    </td>
+
+                    <td class="formItem">
+                        <nhw:CustomFormatDateBox ui:field="from"/>
+                    </td>
+
+                    <td class="form-item-label">
+                        <gwt:Label>
+                            <ui:msg key="to.date">To Date</ui:msg>
+                        </gwt:Label>
+                    </td>
+
+                    <td class="formItem">
+                        <nhw:CustomFormatDateBox ui:field="to"/>
+                    </td>
+
+                    <td class="form-item-label">
+                        <gwt:Label ui:field="clientLabel">
+                            <ui:msg key="client">Client</ui:msg>
+                        </gwt:Label>
+                    </td>
+
+                    <td class="formItem">
+                        <nhcsw:ClientSelect ui:field="sbClient"/>
+                    </td>
+                    <td/>
+                    <td class="formItem" align="RIGHT">
+                        <nhw:NetNumeroButton ui:field="btFilter">
+                            <ui:msg key="filter">Filter</ui:msg>
+                        </nhw:NetNumeroButton>
+                    </td>
+                </tr>
+
+                <tr class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+
+                    <td class="form-item-label">
+                        <gwt:Label ui:field="staffLabel">
+                            <ui:msg key="staff.contractor">Staff/Contractor</ui:msg>
+                        </gwt:Label>
+                    </td>
+
+                    <td class="formItem">
+                        <nhss:StaffSelect ui:field="sbStaff"/>
+                    </td>
+
+                    <td class="form-item-label">
+                        <gwt:Label ui:field="projectLabel">
+                            <ui:msg key="timeentry.project">Project</ui:msg>
+                        </gwt:Label>
+                    </td>
+
+                    <td class="formItem">
+                        <nhpw:ProjectSelect ui:field="sbProject"/>
+                    </td>
+
+                    <td class="form-item-label">
+                        <gwt:Label ui:field="taskLabel">
+                            <ui:msg key="timeentry.task">Task</ui:msg>
+                        </gwt:Label>
+                    </td>
+
+                    <td class="formItem">
+                        <nhtw:TaskSelect ui:field="sbTask"/>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

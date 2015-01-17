@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+
+    <gwt:HorizontalPanel styleName="entity-detail-toolbar">
+        <gwt:cell verticalAlignment="ALIGN_MIDDLE">
+            <gwt:Anchor ui:field="btDelete" tabIndex="-1" href="javascript:;">
+                <img src="../../i/common/16/delete2.png" border="0" alt="Delete"/>
+            </gwt:Anchor>
+        </gwt:cell>
+        <gwt:VerticalPanel height="100%">
+            <gwt:cell verticalAlignment="ALIGN_MIDDLE">
+                <gwt:Anchor ui:field="btMoveUp" tabIndex="-1" href="javascript:;" styleName="move-up-button"/>
+            </gwt:cell>
+            <gwt:cell verticalAlignment="ALIGN_MIDDLE">
+                <gwt:Anchor ui:field="btMoveDown" tabIndex="-1" href="javascript:;" styleName="move-down-button"/>
+            </gwt:cell>
+        </gwt:VerticalPanel>
+    </gwt:HorizontalPanel>
+
+</ui:UiBinder>

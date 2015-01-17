@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <dl class="inh-menu">
+            <dt class="inh-menu">
+                <a href="#receivables" class="inh-menu">
+                    <ui:msg key="submenu.reports.receivables">Receivables</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu">
+                <a href="#deposits" class="inh-menu">
+                    <ui:msg key="submenu.reports.deposits">Deposits</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu">
+                <a href="#sales-tax" class="inh-menu">
+                    <ui:msg key="submenu.reports.salestax">Sales Tax</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu-end">
+                <a href="#sales-vat" class="inh-menu">
+                    <ui:msg key="submenu.reports.vattax">Sales VAT</ui:msg>
+                </a>
+            </dt>
+        </dl>
+    </g:HTMLPanel>
+</ui:UiBinder> 

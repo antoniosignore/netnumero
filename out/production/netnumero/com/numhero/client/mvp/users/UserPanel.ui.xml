@@ -1,0 +1,126 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+        xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:gwtdate="com.google.gwt.user.datepicker.client"
+        xmlns:nhw="urn:import:com.numhero.client.widget"
+        xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+        xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+        ui:defaultLocale="en"
+        ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+        ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+        ui:generateFilename="User" ui:generateLocales="default">
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:DisclosurePanel ui:field="errorsPanel" styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="14">
+                            <ui:msg key="user.contact.information">User information</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="user.username">Username</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="name" enabled="false"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="user.first.name">First Name</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="firstName"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="user.last.name">Last Name</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="lastName"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="user.password">Password</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="password"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="user.profile">Profile</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:UserProfileComboBox ui:field="userProfile" enabled="false"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="user.profile">Status</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:UserStatusComboBox ui:field="userStatus" enabled="false"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="timeentry.created">Last Login</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox ui:field="lastLogin" enabled="false"/>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </gwt:HTMLPanel>
+
+        <gwt:HorizontalPanel styleName="buttonsPanel">
+            <nhw:NetNumeroButton ui:field='btSave'>
+                <ui:msg key="save">Save</ui:msg>
+            </nhw:NetNumeroButton>
+
+            <nhw:NetNumeroButton href="javascript:;" ui:field="btCancel">
+                <ui:msg key="cancel">Cancel</ui:msg>
+            </nhw:NetNumeroButton>
+        </gwt:HorizontalPanel>
+
+    </gwt:HTMLPanel>
+
+
+</ui:UiBinder>
+
+

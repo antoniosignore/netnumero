@@ -1,0 +1,34 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:n="urn:import:com.numhero.client.widget"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             xmlns:nhiw="urn:import:com.numhero.client.mvp.home"
+             xmlns:nhmi="urn:import:com.numhero.client.mvp.moneyin">
+    <ui:style>
+        /* Add CSS here. See the GWT docs on UI Binder for more details */
+        .important {
+        font-weight: bold;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+
+        <gwt:Label ui:field="message" width="400px">
+        </gwt:Label>
+
+        <br/>
+
+        <gwt:TextArea width="400px" height="300px" ui:field="taNotes"/>
+
+        <gwt:HorizontalPanel>
+            <n:NetNumeroButton tabIndex="13" href="javascript:;" ui:field="btSaveDraft">
+                <ui:msg key="reportbug.submit">Submit</ui:msg>
+            </n:NetNumeroButton>
+
+            <n:NetNumeroButton tabIndex="14" ui:field="btCancel">
+                <ui:msg key="cancel">Cancel</ui:msg>
+            </n:NetNumeroButton>
+        </gwt:HorizontalPanel>
+
+    </g:HTMLPanel>
+</ui:UiBinder> 

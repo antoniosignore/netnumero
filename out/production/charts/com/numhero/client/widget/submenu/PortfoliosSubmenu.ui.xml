@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+    </ui:style>
+    <g:HTMLPanel>
+        <dl class="inh-menu">
+            <dt class="inh-menu">
+                <a href="#portfolio" class="inh-menu">
+                    <ui:msg key="create.stock">Create New Portfolio</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu">
+                <a href="#portfolios" class="inh-menu">
+                    <ui:msg key="manage.stocks">Manage Portfolios</ui:msg>
+                </a>
+            </dt>
+        </dl>
+    </g:HTMLPanel>
+</ui:UiBinder> 

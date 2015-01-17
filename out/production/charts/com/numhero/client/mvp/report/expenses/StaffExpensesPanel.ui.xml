@@ -1,0 +1,93 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+        xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:gwtdate="com.google.gwt.user.datepicker.client"
+        xmlns:nhw="urn:import:com.numhero.client.widget"
+        xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+        xmlns:gwt="urn:import:com.google.gwt.user.client.ui" ui:defaultLocale="en"
+        xmlns:nhex="urn:import:com.numhero.client.mvp.report"
+        xmlns:nhcsw="urn:import:com.numhero.client.mvp.clientsupplier"
+        ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+        ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+        ui:generateFilename="ExpensePanel" ui:generateLocales="default">
+
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="14">
+                            <ui:msg key="staff.receipts.reports">Staff Receipts Reports</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="client">Client</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcsw:ClientSelect ui:field="sbClient"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="from.date">From Date</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox ui:field="from"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="to.date">To Date</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox ui:field="to"/>
+                        </td>
+                    </tr>
+
+                    <tr class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+
+                        <td class="formItem">
+                            <gwt:Label>
+                                <ui:msg key="receipt.staff.status">Staff Status</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="form-item-label">
+                            <nhcb:ReceiptStaffStatusComboBox ui:field="receiptStaffStatusComboBox"/>
+                        </td>
+
+                        <td class="formItem">
+                            <gwt:Label>
+                                <ui:msg key="receipt.staff.status">Client Status</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="form-item-label">
+                            <nhcb:ReceiptClientStatusComboBox ui:field="receiptClientStatusComboBox"/>
+                        </td>
+
+
+                        <td class="formItem" colspan="6">
+                            <nhw:NetNumeroButton ui:field="btRefresh">
+                                <ui:msg key="refresh">Refresh</ui:msg>
+                            </nhw:NetNumeroButton>
+                        </td>
+                    </tr>
+
+                    <tr class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <td colspan="14">
+                            <nhex:ReportExpensesTable ui:field="unbilledExpensesTable"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+    </gwt:HTMLPanel>
+</ui:UiBinder>
