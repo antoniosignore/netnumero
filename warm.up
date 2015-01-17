@@ -1,0 +1,38 @@
+#!/bin/bash
+# rand.sh
+
+Suites="11
+12
+13
+14
+15
+16"
+
+Denominations="0
+1
+2
+3
+4
+5
+6
+7
+8
+9"
+
+suite=($Suites)                # Read into array variable.
+denomination=($Denominations)
+
+num_suites=${#suite[*]}        # Count how many elements.
+num_denominations=${#denomination[*]}
+
+for (( ; ; ))
+do
+        x=${suite[$((RANDOM%num_suites))]}
+        y="${denomination[$((RANDOM%num_denominations))]}"
+        echo 'wait for' $x$y
+        curl http://netnumero.appspot.com/rest/company/invoice/508007
+#        curl -x proxy:port http://netnumero.appspot.com/rest/company/invoice/508007
+        sleep $x$y
+        echo 'go'
+done
+

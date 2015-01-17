@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel styleName="table-footer-panel">
+        <g:HorizontalPanel ui:field="footPanel">
+            <g:MenuBar styleName="table-footer-combo" ui:field="tableFooterActionsCombo"/>
+            <g:HorizontalPanel width="500px" styleName="tableFooterButtonsPanel">
+                <g:cell width="100px">
+                    <g:Image url="../../i/common/first.jpg" ui:field="firstData"></g:Image>
+                </g:cell>
+                <g:cell width="100px">
+                    <g:Image url="../../i/common/prev.jpg" ui:field="prevData"></g:Image>
+                </g:cell>
+
+                <g:cell width="100px">
+                    <g:Image url="../../i/common/next.jpg" ui:field="nextData"></g:Image>
+                </g:cell>
+
+                <g:cell width="100px">
+                    <g:Image url="../../i/common/last.jpg" ui:field="lastData"></g:Image>
+                </g:cell>
+            </g:HorizontalPanel>
+        </g:HorizontalPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 

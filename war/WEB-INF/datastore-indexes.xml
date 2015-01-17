@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+
+
+    <!-- Invoice -->
+    <datastore-index kind="Invoice" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="lastUpdated" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Invoice" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="lastUpdated" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="Invoice" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="invoiceType" direction="asc"/>
+        <property name="lastUpdated" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Invoice" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="invoiceType" direction="asc"/>
+        <property name="lastUpdated" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="Invoice" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="invoiceType" direction="asc"/>
+        <property name="dateRaised" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Invoice" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="invoiceType" direction="asc"/>
+        <property name="invoiceStatus" direction="asc"/>
+    </datastore-index>
+
+
+    <datastore-index kind="Invoice" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="invoiceStatus" direction="asc"/>
+        <property name="invoiceType" direction="asc"/>
+        <property name="dateRaised" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Invoice" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="invoiceArchived" direction="asc"/>
+        <property name="invoiceType" direction="asc"/>
+        <property name="lastUpdated" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="Invoice" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="invoiceArchived" direction="asc"/>
+        <property name="invoiceType" direction="asc"/>
+        <property name="lastUpdated" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Invoice" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="invoiceArchived" direction="asc"/>
+        <property name="invoiceStatus" direction="asc"/>
+        <property name="invoiceType" direction="asc"/>
+        <property name="dateRaised" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- InvoiceDetail -->
+    <datastore-index kind="InvoiceDetail" ancestor="true" source="auto">
+        <property name="details_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- Expense -->
+    <datastore-index kind="Expense" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Expense" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="clientSupplierID" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- ExpenseReceipt -->
+    <datastore-index kind="ExpenseReceipt" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ExpenseReceipt" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ExpenseReceipt" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="clientSupplierID" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ExpenseReceipt" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="clientSupplierID" direction="asc"/>
+        <property name="receiptStatus" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ExpenseReceipt" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="staffId" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ExpenseReceipt" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="staffId" direction="asc"/>
+        <property name="receiptStatus" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ExpenseReceipt" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="clientSupplierID" direction="asc"/>
+        <property name="receiptStatus" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ExpenseReceipt" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="clientSupplierID" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ExpenseReceipt" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- BusinessTransaction -->
+    <datastore-index kind="BusinessTransaction" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="date" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="BusinessTransaction" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- Staff -->
+
+    <datastore-index kind="Staff" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+
+
+    <datastore-index kind="Staff" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="staffType" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- BankAccount -->
+    <datastore-index kind="BankAccount" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="lastUpdated" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="BankAccount" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="lastUpdated" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="BankAccount" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="___LowerCaseName" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="BankAccount" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- BankTransaction -->
+
+    <datastore-index kind="BankTransaction" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="lastUpdated" direction="desc"/>
+    </datastore-index>
+
+
+    <!-- ClientSupplier -->
+    <datastore-index kind="ClientSupplier" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="client" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ClientSupplier" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="client" direction="asc"/>
+        <property name="___LowerCaseName" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ClientSupplier" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="supplier" direction="asc"/>
+        <property name="___LowerCaseName" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ClientSupplier" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="supplier" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ClientSupplierContact" ancestor="true" source="auto">
+        <property name="contacts_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="ClientSupplier" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- TaxInfo -->
+    <datastore-index kind="TaxInfo" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="TaxInfo" ancestor="false" source="auto">
+        <property name="businessAccountId" direction="asc"/>
+        <property name="lastUpdated" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="TaxInfo" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="___LowerCaseName" direction="asc"/>
+    </datastore-index>
+
+    <!-- Project -->
+    <datastore-index kind="Project" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="Project" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="___LowerCaseName" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- ProductService -->
+    <datastore-index kind="ProductService" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="___LowerCaseName" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- Task -->
+    <datastore-index kind="Task" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="Task" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="___LowerCaseName" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- Category -->
+    <datastore-index kind="Category" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Category" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="___LowerCaseName" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Category" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- TimeEntry -->
+    <datastore-index kind="TimeEntry" ancestor="false" source="manual">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="billed" direction="asc"/>
+        <property name="projectId" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+    <!-- NominalLedgerAccount -->
+    <datastore-index kind="NominalLedgerAccount" ancestor="false" source="auto">
+        <property name="businessAccountUri" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+
+
+    <!-- DocumentPosition -->
+    <datastore-index kind="DocumentPosition" ancestor="true" source="auto">
+        <property name="positionIndex" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>

@@ -1,0 +1,130 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:nhpw="urn:import:com.numhero.client.mvp.project"
+             xmlns:nhtw="urn:import:com.numhero.client.mvp.task"
+             xmlns:nhss="urn:import:com.numhero.client.mvp.staff"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui" ui:defaultLocale="en"
+             xmlns:nhtb="urn:import:com.numhero.client.widget.textbox"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="TimeEntryPanel" ui:generateLocales="default"
+             xmlns:d="urn:import:com.google.gwt.user.datepicker.client">
+
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:DisclosurePanel ui:field="errorsPanel"
+                             styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0"
+                   width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="6">
+                            <ui:msg key="project.details">Time Entries</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="timeentry.selected.date">Selected Date</ui:msg>
+                            </gwt:Label>
+                        </td>
+
+                        <td class="formItem">
+                            <d:DateBox ui:field="selectedDate"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="staff.contractor">Staff/Contractor</ui:msg>
+                            </gwt:Label>
+                        </td>
+
+                        <td class="formItem">
+                            <nhss:StaffSelect ui:field="staffSelect"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="timeentry.project">Project</ui:msg>
+                            </gwt:Label>
+                        </td>
+
+                        <td class="formItem">
+                            <nhpw:ProjectSelect ui:field="sbProject"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="timeentry.task">Task</ui:msg>
+                            </gwt:Label>
+                        </td>
+
+                        <td class="formItem">
+                            <nhtw:TaskSelect ui:field="sbTask"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="timeentry.notes">Notes</ui:msg>
+                            </gwt:Label>
+                        </td>
+
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="notes"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="hours">Hours</ui:msg>
+                            </gwt:Label>
+                        </td>
+
+                        <td class="formItem">
+                            <nhtb:NumberTextBox readOnly="false" ui:field="hours"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">
+                            <gwt:HorizontalPanel styleName="buttonsPanel">
+                                <nhw:NetNumeroButton ui:field='btSave'>
+                                    <ui:msg key="save">Save</ui:msg>
+                                </nhw:NetNumeroButton>
+                                <nhw:NetNumeroButton ui:field="btCancel"
+                                                     href="#time">
+                                    <ui:msg key="cancel">Cancel</ui:msg>
+                                </nhw:NetNumeroButton>
+                            </gwt:HorizontalPanel>
+                        </td>
+                    </tr>
+
+                    <!--<tr>-->
+                    <!--<td colspan="2">-->
+                    <!--<nhte:TimeEntriesTable ui:field="timeEntriesTable"/>-->
+                    <!--</td>-->
+                    <!--</tr>-->
+                </tbody>
+            </table>
+
+        </gwt:HTMLPanel>
+
+    </gwt:HTMLPanel>
+</ui:UiBinder>

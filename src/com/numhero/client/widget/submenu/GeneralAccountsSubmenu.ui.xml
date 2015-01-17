@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+    </ui:style>
+    <g:HTMLPanel>
+        <dl class="inh-menu">
+            <dt class="inh-menu">
+                <a href="#bankaccount" class="inh-menu">
+                    <ui:msg key="submenu.nominalLedgerAccounts.create.nominalLedgerAccount">Create Bank Account</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu">
+                <a href="#bankaccounts" class="inh-menu">
+                    <ui:msg key="submenu.nominalLedgerAccounts.manage.nominalLedgerAccounts">Manage Banks</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu">
+                <a href="#bank-transaction" class="inh-menu">
+                    <ui:msg key="submenu.nominalLedgerAccounts.create.bank.transaction">Create Bank Transaction</ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu">
+                <a href="#bank-transactions" class="inh-menu">
+                    <ui:msg key="submenu.nominalLedgerAccounts.bank.transactions">Bank Transactions</ui:msg>
+                </a>
+            </dt>
+
+            <dt class="inh-menu">
+                <a href="#category" class="inh-menu">
+                    <ui:msg key="submenu.moneyout.create.expense.categories">Create Expense Categories
+                    </ui:msg>
+                </a>
+            </dt>
+            <dt class="inh-menu-end">
+                <a href="#categories" class="inh-menu">
+                    <ui:msg key="submenu.moneyout.view.expense.categories">View Expense Categories
+                    </ui:msg>
+                </a>
+            </dt>
+
+        </dl>
+    </g:HTMLPanel>
+</ui:UiBinder> 

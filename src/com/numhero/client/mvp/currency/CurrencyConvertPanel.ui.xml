@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+        xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:nhw="urn:import:com.numhero.client.widget"
+        xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+        xmlns:nhc="urn:import:com.numhero.client.mvp.currency"
+        ui:defaultLocale="en"
+        ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+        ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+        ui:generateFilename="Currency" ui:generateLocales="default">
+
+    <gwt:HTMLPanel styleName="form-with-shadow">
+       	<nhc:CurrencyConvertTable ui:field="cct"></nhc:CurrencyConvertTable>
+
+        <gwt:HorizontalPanel>
+            <nhw:NetNumeroButton ui:field="btClose">
+                <ui:msg key="button.close">Close</ui:msg>
+            </nhw:NetNumeroButton>
+        </gwt:HorizontalPanel>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

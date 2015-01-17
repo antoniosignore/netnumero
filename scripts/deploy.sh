@@ -1,0 +1,1 @@
+##/usr/lib/jvm/java-6-sun-1.6.0.20/bin/java -Dfile.encoding=UTF-8 -classpath /home/uberto/svijava/netnumero/lib/appengine-java-sdk-1.3.4/lib/appengine-tools-api.jar com.google.appengine.tools.admin.AppCfg --email=uberto@netnumero.com update /home/uberto/svijava/netnumero/out/artifacts/Netnumero_Web_exploded

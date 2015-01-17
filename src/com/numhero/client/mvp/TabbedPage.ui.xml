@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             xmlns:nhw="urn:import:com.numhero.client.widget">
+
+    <ui:style>
+
+    </ui:style>
+
+    <gwt:HTMLPanel>
+
+        <nhw:HeaderPanel ui:field="headerPanel"/>
+
+        <gwt:AbsolutePanel styleName="mainContentPanel" ui:field="contentPanel"/>
+
+        <nhw:Footer ui:field="footerPanel"/>
+
+    </gwt:HTMLPanel>
+
+</ui:UiBinder>

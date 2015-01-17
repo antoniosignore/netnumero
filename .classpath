@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/project-lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/asm-3.2.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/gin-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/gwt-vl-3.0-alpha-without-hibernate.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/hamcrest-all-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/iText-5.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/lucene-core-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/mockito-all-1.8.4.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/guice-customloader-20090412.jar"/>
+	<classpathentry kind="lib" path="lib/project-lib/commons-fileupload-1.2.2.jar"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/App Engine (1)"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER/GWT (1)"/>
+	<classpathentry kind="lib" path="lib/appengine-java-sdk-1.4.0/lib/impl/appengine-api-stubs.jar"/>
+	<classpathentry kind="lib" path="lib/appengine-java-sdk-1.4.0/lib/testing/appengine-testing.jar"/>
+	<classpathentry kind="lib" path="lib/appengine-java-sdk-1.4.0/lib/appengine-tools-api.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

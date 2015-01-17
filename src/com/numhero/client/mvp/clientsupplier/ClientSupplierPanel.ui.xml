@@ -1,0 +1,214 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             ui:defaultLocale="en" ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="ClientSupplier" ui:generateLocales="default">
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:DisclosurePanel ui:field="errorsPanel" styleName="validation-advice">
+            <gwt:header>
+                <ui:msg key="Errors">Errors</ui:msg>
+            </gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="6">
+                            <ui:msg key="organisational.details">Organisational Details</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="organisation.name">Organisation name</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="3">
+                            <gwt:TextBox ui:field="tbCompanyName" name="company.name" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="organisation.vat">VAT number</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbVAT"  name="company.vat" width="100%"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:CheckBox ui:field="cbPartnerType"/>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:Label ui:field="lbPartnerType"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="email">Email</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbCompanyEmail"  name="company.email" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="phone">Phone</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbCompanyPhone" name="company.phone" width="100%"/>
+                        </td>
+
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="fax">Fax</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbCompanyFax" name="company.fax" width="100%"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label-top">
+                            <gwt:Label>
+                                <ui:msg key="internal.notes">Internal notes</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:TextArea ui:field="taNotes" name="company.notes" width="100%"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+         <gwt:DisclosurePanel width="100%"  open="false">
+                <gwt:header>
+					<ui:msg key="address">Address</ui:msg>
+                </gwt:header>
+                <gwt:HTMLPanel>
+                    <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="address">Address</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="3">
+                            <gwt:TextBox ui:field="tbAddress" name="company.address.address" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="zip">Zip Code</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbZipCode" name="company.address.zipcode" width="100%"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="city">City</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbCity" name="company.address.city" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="region">Region</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbRegion" name="company.address.region" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="country">Country</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:CountryComboBox ui:field="tbCountry" name="company.address.country" width="100%"/>
+                        </td>
+                    </tr>
+                </tbody>
+                    </table>
+                </gwt:HTMLPanel>
+            </gwt:DisclosurePanel>
+        </gwt:HTMLPanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+        <gwt:DisclosurePanel width="100%" open="false">
+                <gwt:header>
+					<ui:msg key="contact.information">Contact information</ui:msg>
+                </gwt:header>
+                <gwt:HTMLPanel>
+                    <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                   <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="name">Name</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="5">
+                            <gwt:TextBox ui:field="tbName" name="company.contact.name" width="100%"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="email">Email</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbEmail" name="company.contact.email" width="100%"/>
+                        </td>
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="phone">Phone</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbPhone" name="company.contact.phone" width="100%"/>
+                        </td>
+
+                        <td class="form-item-label" width="80px">
+                            <gwt:Label>
+                                <ui:msg key="mobile">Mobile</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:TextBox ui:field="tbMobile" name="company.contact.mobile" width="100%"/>
+                        </td>
+                    </tr>
+                </tbody>
+                    </table>
+                </gwt:HTMLPanel>
+            </gwt:DisclosurePanel>
+           
+        </gwt:HTMLPanel>
+
+        <gwt:HorizontalPanel>
+            <nhw:NetNumeroButton href="javascript:;" ui:field="btSave">
+                <ui:msg key="save">Save</ui:msg>
+            </nhw:NetNumeroButton>
+            <nhw:NetNumeroButton href="javascript:;" ui:field="btCancel">
+                <ui:msg key="cancel">Cancel</ui:msg>
+            </nhw:NetNumeroButton>
+        </gwt:HorizontalPanel>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

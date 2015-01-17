@@ -1,0 +1,56 @@
+@font-face {
+	font-family: 'AntennaBold';
+	src: url('../f/antbd___-webfont.eot');
+	src: local('☺'), url('../f/antbd___-webfont.woff') format('woff'), url('../f/antbd___-webfont.ttf') format('truetype'), url('../f/antbd___-webfont.svg#webfontfNXQw6JQ') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AntennaLight';
+	src: url('../f/antlt___-webfont.eot');
+	src: local('☺'), url('../f/antlt___-webfont.woff') format('woff'), url('../f/antlt___-webfont.ttf') format('truetype'), url('../f/antlt___-webfont.svg#webfontfNXQw6JQ') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AntennaMedium';
+	src: url('../f/antmd___-webfont.eot');
+	src: local('☺'), url('../f/antmd___-webfont.woff') format('woff'), url('../f/antmd___-webfont.ttf') format('truetype'), url('../f/antmd___-webfont.svg#webfontfNXQw6JQ') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CalibriRegular';
+	src: url('../f/calibri-webfont.eot');
+	src: local('☺'), url('../f/calibri-webfont.woff') format('woff'), url('../f/calibri-webfont.ttf') format('truetype'), url('../f/calibri-webfont.svg#webfontfNXQw6JQ') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CalibriBold';
+	src: url('../f/calibrib-webfont.eot');
+	src: local('☺'), url('../f/calibrib-webfont.woff') format('woff'), url('../f/calibrib-webfont.ttf') format('truetype'), url('../f/calibrib-webfont.svg#webfontfNXQw6JQ') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CalibriItalic';
+	src: url('../f/calibrii-webfont.eot');
+	src: local('☺'), url('../f/calibrii-webfont.woff') format('woff'), url('../f/calibrii-webfont.ttf') format('truetype'), url('../f/calibrii-webfont.svg#webfontfNXQw6JQ') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CalibriBoldItalic';
+	src: url('calibriz-webfont.eot');
+	src: local('☺'), url('calibriz-webfont.woff') format('woff'), url('calibriz-webfont.ttf') format('truetype'), url('calibriz-webfont.svg#webfontfNXQw6JQ') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+

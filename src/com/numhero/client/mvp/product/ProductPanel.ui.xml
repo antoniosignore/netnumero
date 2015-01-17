@@ -1,0 +1,103 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:nhtb="urn:import:com.numhero.client.widget.textbox"
+             xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui" ui:defaultLocale="en"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="Product" ui:generateLocales="default">
+
+    <gwt:HTMLPanel>
+
+        <gwt:DisclosurePanel ui:field="errorsPanel"
+                             styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0"
+                   width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <ui:msg key="product.details">Product Details</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="productService.panel.name">Name</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="3">
+                            <gwt:TextBox ui:field="tbProductName" width="100%"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="productService.panel.description">Description</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="3">
+                            <gwt:TextArea ui:field="tbProductDescription" width="100%"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="productService.panel.currency">Currency</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:CurrencySelect ui:field="cbProductCurrency" width="80px"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="productService.panel.unit.price">Unit Price</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhtb:NumberTextBox ui:field="tbProductUnitPrice" width="100px"/>
+                        </td>
+                    </tr>
+                    <!-- 
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="productService.panel.tracking.enabled">Tracking enabled</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <gwt:CheckBox ui:field="cbProductTrackingEnabled"/>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label ui:field="lbProductQuantity">
+                                <ui:msg key="productService.panel.quantity">Quantity</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhtb:NumberTextBox ui:field="tbProductQuantity" width="120px"/>
+                        </td>
+                    </tr>
+                     -->
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HorizontalPanel>
+            <nhw:NetNumeroButton href="javascript:;"
+                                 ui:field='btSave'>
+                <ui:msg key="save">Save</ui:msg>
+            </nhw:NetNumeroButton>
+            <nhw:NetNumeroButton href="javascript:;"
+                                 ui:field='btCancel'>
+                <ui:msg key="cancel">Cancel</ui:msg>
+            </nhw:NetNumeroButton>
+        </gwt:HorizontalPanel>
+    </gwt:HTMLPanel>
+
+</ui:UiBinder>

@@ -1,0 +1,155 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:nhtb="urn:import:com.numhero.client.widget.textbox"
+             xmlns:nhcb="urn:import:com.numhero.client.widget.combobox"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             ui:defaultLocale="en"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="InvoicePanel"
+             ui:generateLocales="default">
+
+    <gwt:HTMLPanel>
+
+        <gwt:DisclosurePanel ui:field="errorsPanel" styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTML ui:field="PDF">
+            <div ui:field="pdfDivElement"/>
+        </gwt:HTML>
+
+        <gwt:HTMLPanel styleName="form-with-shadow" ui:field="editor">
+            <table ui:field="teMain" class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <gwt:Label ui:field="lbDetails"/>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="invoice.client">Client</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:DropDownBox tabIndex="1" ui:field="sbPartner"/>
+                        </td>
+                        <td class="formItem" width="50%" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="invoice.id">ID</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="form-item-label">
+                            <gwt:Label ui:field="lbInvoiceID"/>
+                        </td>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="invoice.currency">Currency</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhcb:CurrencySelect tabIndex="2" ui:field="cbCurrency"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="invoice.date.raised">Date Raised</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox tabIndex="3" ui:field="dateRaised"/>
+                        </td>
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="invoice.pay.at.date">Due Date</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox tabIndex="4" ui:field="dateDue"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="formItem" colspan="4">
+                            <gwt:FocusPanel tabIndex="5" ui:field="invoiceDetailsPanel"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:54px;" colspan="4">
+                            <nhw:NetNumeroButton tabIndex="6" href="javascript:;" ui:field="btAddInvoiceDetail">
+                                <ui:msg key="invoice.add.item">Add Item</ui:msg>
+                            </nhw:NetNumeroButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="invoice.discount">Discount %</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhtb:NumberTextBox tabIndex="7" ui:field="tbDiscount"/>
+                        </td>
+                        <td class="formItem" width="50%" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td width="50%" class="form-item-label" style="text-align: left">
+                                        <gwt:Label>
+                                            <ui:msg key="invoice.terms.and.conditions">Terms and Conditions</ui:msg>
+                                        </gwt:Label>
+                                    </td>
+                                    <td width="50%" class="form-item-label" style="text-align: left">
+                                        <gwt:Label>
+                                            <ui:msg key="invoice.notes">Notes</ui:msg>
+                                        </gwt:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" style="padding: 0px 5px 5px 5px">
+                                        <gwt:TextArea tabIndex="9" width="100%" ui:field="taTermsConditions"/>
+                                    </td>
+                                    <td width="50%" style="padding: 0px 5px 5px 5px">
+                                        <gwt:TextArea tabIndex="10" width="100%" ui:field="taNotes"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+
+        <gwt:HorizontalPanel>
+
+            <nhw:NetNumeroButton tabIndex="11" href="javascript:;" ui:field="btSendAsEmail">
+                <ui:msg key="invoice.sendAsEmail">Send As Email</ui:msg>
+            </nhw:NetNumeroButton>
+
+            <nhw:NetNumeroButton tabIndex="12" href="javascript:;" ui:field="btSendSnailMail">
+                <ui:msg key="invoice.printAsPDF">Send Snail Mail</ui:msg>
+            </nhw:NetNumeroButton>
+            <gwt:VerticalPanel width="50px"/>
+            <nhw:NetNumeroButton tabIndex="13" href="javascript:;" ui:field="btSaveDraft">
+                <ui:msg key="invoice.saveDraft">Save As Draft</ui:msg>
+            </nhw:NetNumeroButton>
+
+            <nhw:NetNumeroButton tabIndex="14" ui:field="btCancel">
+                <ui:msg key="invoice.cancel">Cancel</ui:msg>
+            </nhw:NetNumeroButton>
+        </gwt:HorizontalPanel>
+
+    </gwt:HTMLPanel>
+
+</ui:UiBinder>

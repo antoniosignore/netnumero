@@ -1,0 +1,192 @@
+/* iNumero css styles
+-------------------------------------------------*/
+
+@font-face {
+  font-family: "Antenna Bold";
+  src: url(../f/antbd.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Antenna Regular";
+  src: url(../f/antmd.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url(../f/calibri.ttf) format("truetype");
+}
+
+#base {
+	border: 1px solid #000;
+}
+
+h1.inh-standard { 
+	font-family: "Antenna Bold", sans-serif;
+	font-size:21px;
+	color:#000000;
+ }
+ 
+h1.inh-menu { 
+    font-family: "Antenna Regular", sans-serif;
+    font-size:21px;
+    color:#ffffff;
+}
+
+h2.inh-standard { 
+	font-family: "Calibri", sans-serif;
+	font-size:21px;
+	color:#0059C6;
+ }
+
+h2.inh-menu { 
+    font-family: "Calibri", sans-serif;
+    font-size:21px;
+	color:#ffffff;
+}
+
+h3.inh-standard { 
+	font-family: "Calibri", sans-serif;
+	font-size:14px;
+	color:#0059C6;
+ }
+
+h3.inh-menu { 
+	font-family: "Calibri", sans-serif;
+	font-size:14px;
+	color:#ffffff;
+ }
+
+p.inh-standard { 
+	font-family: "Calibri", sans-serif;
+	font-size:12px;
+	color:#777777;
+ }
+ 
+ul.inh-standard {
+	list-style-type: disc;
+	list-style-image: url(../i/common/bullet.png);
+	list-style-position: inside;
+}
+	
+ul.inh-standard li {
+	font-family: "Calibri", sans-serif;
+	font-size:12px;
+	color:#777777;
+	padding-bottom:7px;
+}
+
+ul.inh-menu {
+	list-style-type: disc;
+	list-style-image: url(../i/common/bullet_menu.png);
+	list-style-position: inside;
+	padding: 0;
+	margin: 0;
+    width: 100%;
+    position:static;
+    
+}
+	
+ul.inh-menu li {
+	font-family: "Calibri", sans-serif;
+	font-size:12px;
+	color:#777777;
+    float:none;
+    margin:0;
+    position:static;
+    padding:0;
+    
+
+}
+
+table.inh-standard {
+	width:100%;
+	padding-bottom:30px;
+}
+
+table.inh-standard th, table.inh-standard td{
+	background-color:#FFFFFF;
+	text-align:left;
+
+	font-family: "Calibri", sans-serif;
+	font-size:14px;
+	border-collapse:collapse;
+}
+
+table.inh-standard th{
+	color:#000000;
+	border-bottom:#000000 1px solid;	
+}
+
+table.inh-standard td{
+	color:#666666;
+	border-bottom:#C4C4C4 1px solid;
+	padding-top:4px;
+}
+
+table.inh-standard td img{
+	padding-right:8px;	
+}
+
+table.inh-standard th.right{
+	text-align:right;
+}
+
+table.inh-standard td.right, table td.paid{
+	text-align:right;
+}
+
+table.inh-standard td.paid{
+	color:#5C8811;
+}
+
+
+/* GENERAL STUFF
+--------------------------------------------------*/
+img {
+	padding:0;
+	margin:0;
+	border:none;
+}
+
+hr {
+	border:none;
+	height:12px; 
+	background-image:url(../i/common/hr.png); 
+}
+
+a.inh-standard {
+	color:#0059C6;
+	text-decoration:none;
+}
+
+a.inh-standard:hover {
+	text-decoration:underline;
+}
+
+a.inh-menu {
+    color:#C4C4C4;
+    text-decoration:none;
+}
+
+a.inh-menu:hover {
+	text-decoration:underline;
+}
+
+span.inh-button {
+    font-family: "Antenna Bold", sans-serif;
+    color: #000; 
+    background-color:#e6a644;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+        padding: 10px 16px 10px 16px;
+}
+a.inh-button {
+    color: #000; 
+    background:#e6a644 url(../i/common/btn-arrow.png) no-repeat right;
+    text-decoration:none;
+    padding: 5px 27px 5px 0;
+    
+}
+
+a.inh-menu:hover, a.inh-button:hover {
+	text-decoration:underline;
+}

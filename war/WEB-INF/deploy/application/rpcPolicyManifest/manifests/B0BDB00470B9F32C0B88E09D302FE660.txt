@@ -1,0 +1,2 @@
+serviceClass: com.numhero.client.service.DataService
+path: 2ADDDE2AB0D74C30BDCE9B685BAEA8B5.gwt.rpc

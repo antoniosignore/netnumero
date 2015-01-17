@@ -1,0 +1,33 @@
+<application>
+    <name>myapp</name>
+    <icon>myicon.png</icon>
+    <color_scheme>classic</color_scheme>
+    <id>1235454</id>
+    <pages>
+        <page title="Home" kind="Home">
+            <background>home.jpg</background>
+        </page>
+        <page title="Music" kind="Music">
+            <server>myserver</server>
+            <songs>
+                <song>
+                    <title>let it be</title>
+                    <src>beatles/letitbe.mp3</src>
+                </song>
+                 <song>
+                    <title>all you need is love</title>
+                    <src>beatles/love.mp3</src>
+                </song>
+            </songs>
+        </page>
+        <page kind="Youtube"></page>
+        <page kind="Video"></page>
+        <page kind="Picture"></page>
+        <page kind="News"></page>
+        <page kind="Rss"></page>
+        <page kind="Tweets"></page>
+        <page kind="Facebook"></page>
+        <page kind="Events"></page>
+        <page kind="Wall"></page>
+    </pages>
+</application>

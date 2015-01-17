@@ -1,0 +1,34 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+        xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:gwt="urn:import:com.google.gwt.user.client.ui" ui:defaultLocale="en"
+        xmlns:nhex="urn:import:com.numhero.client.mvp.report.recentTransactions"
+        ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+        ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+        ui:generateFilename="ExpensePanel" ui:generateLocales="default">
+
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+
+            <table class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="14">
+                            <ui:msg key="recent.transactions">Recent transactions</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+                        <td colspan="14">
+                            <nhex:RecentTransactionsTable ui:field="recentTransactionsTable"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </gwt:HTMLPanel>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

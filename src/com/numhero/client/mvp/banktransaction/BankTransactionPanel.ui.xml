@@ -1,0 +1,144 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:nhw="urn:import:com.numhero.client.widget"
+             xmlns:nhss="urn:import:com.numhero.client.mvp.bankaccount"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             ui:defaultLocale="en"
+             xmlns:nhew="urn:import:com.numhero.client.mvp.category"
+             xmlns:nhtb="urn:import:com.numhero.client.widget.textbox"
+             ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+             ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+             ui:generateFilename="BankTransactionPanel" ui:generateLocales="default">
+
+    <gwt:HTMLPanel styleName="formContainer">
+
+        <gwt:DisclosurePanel ui:field="errorsPanel"
+                             styleName="validation-advice">
+            <gwt:header>Errors</gwt:header>
+        </gwt:DisclosurePanel>
+
+        <gwt:HTMLPanel styleName="form-with-shadow">
+            <table class="formContainer" cellpadding="0" cellspacing="0"
+                   width="100%">
+                <thead>
+                    <tr>
+                        <td colspan="10">
+                            <ui:msg key="bank.transaction">Bank Transaction</ui:msg>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="formContainer" cellpadding="0" cellspacing="0" width="100%">
+
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="bank.account">Bank Account</ui:msg>
+                            </gwt:Label>
+                        </td>
+
+                        <td class="formItem">
+                            <nhss:BankAccountSelect ui:field="sbBankAccount"/>
+                        </td>
+
+                        <td class="form-item-label" width="120px">
+                            <gwt:Label>
+                                <ui:msg key="ledger.account">Category</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem">
+                            <nhew:CategorySelect ui:field="sbCategory"/>
+                        </td>
+
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="selected.date">Date</ui:msg>
+                            </gwt:Label>
+                        </td>
+
+                        <td class="formItem">
+                            <nhw:CustomFormatDateBox ui:field="selectedDate"/>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="formItem">
+                            <gwt:RadioButton ui:field='isDeposit' name="radios"
+                                             text="Deposit" checked="true">
+                                <ui:attribute name="text" description="Internal staff"/>
+                            </gwt:RadioButton>
+                        </td>
+
+                        <td class="formItem">
+                            <gwt:RadioButton ui:field='isWithdraw' name="radios"
+                                             text="Withdraw">
+                                <ui:attribute name="text" description="Contractor"/>
+                            </gwt:RadioButton>
+                        </td>
+
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="amount">Amount</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="2">
+                            <nhtb:NumberTextBox readOnly="false" ui:field="amount"/>
+                        </td>
+                        <td class="formItem">
+                            <gwt:Label ui:field="currency"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-item-label">
+                            <gwt:Label>
+                                <ui:msg key="notes">Notes</ui:msg>
+                            </gwt:Label>
+                        </td>
+                        <td class="formItem" colspan="9">
+                            <gwt:TextArea ui:field="notes" width="100%"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="10">
+                            <gwt:HorizontalPanel styleName="buttonsPanel">
+                                <nhw:NetNumeroButton ui:field='btSave'>
+                                    <ui:msg key="save">Save</ui:msg>
+                                </nhw:NetNumeroButton>
+                                <nhw:NetNumeroButton ui:field="btCancel"
+                                                     href="#time">
+                                    <ui:msg key="cancel">Cancel</ui:msg>
+                                </nhw:NetNumeroButton>
+                            </gwt:HorizontalPanel>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </gwt:HTMLPanel>
+
+        <!--<gwt:HTMLPanel styleName="form-with-shadow">-->
+        <!--<table class="formContainer" cellpadding="0" cellspacing="0"-->
+        <!--width="100%">-->
+        <!--<thead>-->
+        <!--<tr ui:field="bankLabel">-->
+        <!--<td colspan="10">-->
+        <!--<nhw:TitleLevelTwo>Your Current Bank Account Balances</nhw:TitleLevelTwo>-->
+        <!--</td>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr ui:field="bankPanel">-->
+        <!--<td colspan="10">-->
+        <!--<nhss:BankAccountPanel ui:field="bankAccountPanel"/>-->
+        <!--</td>-->
+        <!--</tr>-->
+
+        <!--</tbody>-->
+        <!--</table>-->
+        <!--</gwt:HTMLPanel>-->
+
+
+    </gwt:HTMLPanel>
+
+</ui:UiBinder>
