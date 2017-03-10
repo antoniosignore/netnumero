@@ -1,5 +1,4 @@
 # netnumero
 
-Demo at:
 
-http://netnumero.appspot.com/company/myCompany#dashboard
+https://www.slideshare.net/ubertobarbini/develop-gwt-application-in-tdd
